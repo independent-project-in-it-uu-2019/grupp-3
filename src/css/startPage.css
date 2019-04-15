@@ -1,0 +1,14 @@
+.buttongroup {
+
+}
+.startbutton {
+    background-color: #117864;
+    border-radius: 12px;
+    padding: 16px 32px;
+    margin: 16px 32px;
+    text-transform: uppercase;
+    color: white;
+}
+.startbutton:hover {
+    background-color: #0B5345;
+}

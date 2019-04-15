@@ -1,11 +1,9 @@
-.buttongroup {
-
-}
 .startbutton {
-    background-color: #117864;
+    background-color: #138D75;
     border-radius: 12px;
     padding: 16px 32px;
     margin: 16px 32px;
+    border:none;
     text-transform: uppercase;
     color: white;
 }

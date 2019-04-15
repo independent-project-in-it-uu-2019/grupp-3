@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Button from 'react-bootstrap/Button';
-import './startPage.css';
+import '../css/startPage.css';
 
 export class StartPage extends Component {
     render() {

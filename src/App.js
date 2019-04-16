@@ -12,16 +12,19 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <MoreInfo/>
+            </div>
+        );
+    }
+}
+/*
                 <Header headerImg={headerImg} logo={logo}/>
                 <Router>
                     <Route path="/" exact component={StartPage}/>
                     <Route path="/search" exact component={SearchPage}/>
                     <Route path="/more" exact component={MoreInfo}/>
                 </Router>
-            </div>
-        );
-    }
-}
+*/
 
 export default App;
 

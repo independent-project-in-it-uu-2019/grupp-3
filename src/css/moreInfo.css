@@ -1,0 +1,22 @@
+@import "./fonts.css";
+
+.title {
+   font-family: muliRegular;
+   font-size: 2vw;
+   color: #4A4A4A;
+}
+
+.bodyText {
+    text-align: justify;
+}
+
+.imgContainer {
+    float: right;
+    margin-left: 15px;
+}
+
+.container {
+    margin-top: 10px;
+    width: 100%;
+
+}

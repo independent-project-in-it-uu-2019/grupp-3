@@ -6,6 +6,7 @@ import Header from './components/Header'
 import StartPage from './components/startPage';
 import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
+import SmallInfoBox from './components/smallInfoBox'
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {

@@ -1,0 +1,87 @@
+.HeaderContainer {
+    width: 100%;
+    position: relative;
+}
+
+.ImgContainer img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0px 1px 3px black;
+}
+
+.ImgContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .4);
+}
+
+.LogoContainer {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.LogoContainer img{
+    width: 50%;
+    height: 50%;
+    margin-left: -20px;
+    margin-top: 15px;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 10em;
+    font-family: muliExtraBold;
+    text-shadow: 1px 1px 3px black
+  }
+
+.subTitle {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 1.5em;
+    font-family: muliExtraBoldItalic;
+    text-shadow: 1px 1px 3px black;
+  }
+
+.SubHeader {
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    z-index: 2;
+}
+
+p {
+    margin: 10px;
+}
+
+  @font-face {
+    font-family: muliExtraBold;
+    src: url("../fonts/Muli-ExtraBold.ttf");
+  }
+
+  @font-face {
+    font-family: muliExtraBoldItalic;
+    src: url("../fonts/Muli-ExtraBoldItalic.ttf");
+  }

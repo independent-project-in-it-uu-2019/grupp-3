@@ -6,6 +6,7 @@ export default class SmallInfoBox extends Component {
   constructor(props) {
     super(props);
   }
+
   onItemClick(){
     alert("Not implemented yet!");
   }
@@ -30,5 +31,4 @@ export default class SmallInfoBox extends Component {
     </div>
     )
   }
-
 }

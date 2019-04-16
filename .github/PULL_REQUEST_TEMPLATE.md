@@ -12,5 +12,5 @@ Describe the steps to take and/or how to test the changes introduced by this PR.
 
 **How to write a good PR and work with PR feedback**
 
-There are are loads written about this. This could be a start:
+There are loads written about PR and reviews, this could be a start:
 https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/

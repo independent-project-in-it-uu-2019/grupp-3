@@ -27,12 +27,13 @@
     left: 0;
     position: absolute;
     z-index: 2;
+    width: 25%;
 }
 
 .LogoContainer img{
     width: 50%;
     height: 50%;
-    margin-left: -20px;
+    margin-left: 5px;
     margin-top: 15px;
 }
 
@@ -43,9 +44,9 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     color: white;
-    font-size: 10em;
+    font-size: 10vw;
     font-family: muliExtraBold;
-    text-shadow: 1px 1px 3px black
+    text-shadow: 1px 1px 3px black;
   }
 
 .subTitle {
@@ -55,7 +56,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     color: white;
-    font-size: 1.5em;
+    font-size: 2.8vw;
     font-family: muliExtraBoldItalic;
     text-shadow: 1px 1px 3px black;
   }
@@ -70,6 +71,11 @@
     color: white;
     text-shadow: 1px 1px 3px black;
     z-index: 2;
+}
+
+.SubHeader p:hover {
+    cursor: pointer;
+    color: #757474;
 }
 
 p {

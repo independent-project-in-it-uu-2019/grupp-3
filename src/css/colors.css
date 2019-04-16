@@ -10,3 +10,8 @@
     --green9: #117864;
     --green10: #0E6251;
 }
+
+/* Reference there by importing:
+in yourclass.JS: import '../css/colors.css'
+in yourclass.CSS: background-color: var(--maingreen, #138D75); where second argument is fallback value and optional
+ */

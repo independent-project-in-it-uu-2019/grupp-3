@@ -5,6 +5,8 @@ import logo from '../images/UU_LOGO.png'
 
 import CircleImage from './CircleImage'
 import Header from './Header'
+import Footer from './Footer'
+import Button from './Button'
 
 import '../css/moreInfo.css'
 
@@ -38,7 +40,7 @@ export class MoreInfo extends Component {
                 <div className="container">
                 <div className="row">
                     <div className="col-sm-4">
-                        <button>Skitknapp</button>
+                        <Button text="Go back" width={150} height={40}/>
                     </div>
                     <div className="col-sm-4">
                         <p className="title">{this.state.name}</p>
@@ -50,6 +52,8 @@ export class MoreInfo extends Component {
                         <p className="bodyText">{this.state.description}</p>
                     </div>
                 </div>
+                <p className="seperator"/> 
+                <Footer data={this.state.data}/>
                 </div>
             </div>
         );

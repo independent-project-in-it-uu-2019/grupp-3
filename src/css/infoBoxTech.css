@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'LucidaGrande';
+    src: './fonts/lucida-grande/LucidaGrande.ttf';
+}
+
+.SmallInfoTech {
+ margin-top: 10px;
+ margin-left: 10px;
+ width: 90%;
+ height: 250px;
+ background-color: #E8F8F5;
+ position: relative;
+}
+
+.SmallInfoTechTitle {
+  color: #4a4d4c;
+  text-align: left;
+  font-family: 'LucidaGrande';
+  margin-left: 2%;
+  margin-bottom: 0px;
+  width: 85%;
+}
+
+.SmallInfoTechTitle h2:hover {
+  color: #63F0D5;
+  text-decoration: underline #63f0d5;
+  cursor: pointer;
+}
+
+.SmallInfoTechText {
+  margin-top: 0px;
+  color: #4a4d4c;
+  text-align: left;
+  font-family: 'LucidaGrande';
+  overflow: hidden;
+  height: 50%;
+}
+
+.ReadMoreButton {
+  background-color: #138D75;
+  border-radius: 12px;
+  padding: 4px 8px;
+  border:none;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.ReadMoreButton:hover {
+    background-color: #0B5345;
+    text-decoration: underline white;
+}
+
+.seperator{
+  border: 0.5px solid #494d4b;
+  width: 100%;
+  margin-top: 90%;
+  position: absolute;
+}

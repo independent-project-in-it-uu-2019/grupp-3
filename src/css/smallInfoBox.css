@@ -4,52 +4,52 @@
 }
 
 .smallInfoBox {
- height: 150px;
- width: 500px;
+ margin-top: 10px;
+ margin-left: 10px;
+ width: 90%;
  background-image: linear-gradient(to right, #0E6251, #17A589);
  border-radius: 10px;
+ position: relative;
 }
 
 .seperator{
-  height: 100%;
-  top: 0;
-  margin-left: 370px;
   border-right: 3px solid rgba(232, 249, 246, 0.50);
-  padding: 0 10px;
   position: absolute;
+  top: 0;
+  right: 88px;
+
 }
 
-h2 {
+.smallInfoBoxTitle {
   color: #E8F8F5;
   text-align: left;
   text-decoration: underline #E8F8F5;
   font-family: 'LucidaGrande';
-  margin-left: 5px;
-  margin-top: 10px;
+  margin-left: 2%;
+  width: 85%;
 }
 
-h2:hover {
-  color: #63f0d5;
+.smallInfoBoxTitle h2:hover {
+  color: #63F0D5;
   text-decoration: underline #63f0d5;
-  cursor: default;
+  cursor: pointer;
 }
 
-p {
+.smallInfoBoxText {
   color: #E8F8F5;
   text-align: left;
-  width: 380px;
-  height: 90px;
-  overflow: hidden;
   font-family: 'LucidaGrande';
-  margin-left: 5px;
+  overflow: hidden;
+  width: 85%;
 }
 
 .plus {
   position: absolute;
-  top: 37px;
-  left: 410px;
+  top: 30%;
+  right: 0.5%;
 }
 
 .plus:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'LucidaGrande';
+    src: './fonts/lucida-grande/LucidaGrande.ttf';
+}
+
+.smallInfoBox {
+ margin-top: 10px;
+ margin-left: 10px;
+ width: 90%;
+ background-image: linear-gradient(to right, #0E6251, #17A589);
+ border-radius: 10px;
+ position: relative;
+}
+
+.seperator{
+  border-right: 3px solid rgba(232, 249, 246, 0.50);
+  position: absolute;
+  top: 0;
+  right: 88px;
+
+}
+
+.smallInfoBoxTitle {
+  color: #E8F8F5;
+  text-align: left;
+  text-decoration: underline #E8F8F5;
+  font-family: 'LucidaGrande';
+  margin-left: 2%;
+  width: 85%;
+}
+
+.smallInfoBoxTitle h2:hover {
+  color: #63F0D5;
+  text-decoration: underline #63f0d5;
+  cursor: pointer;
+}
+
+.smallInfoBoxText {
+  color: #E8F8F5;
+  text-align: left;
+  font-family: 'LucidaGrande';
+  overflow: hidden;
+  width: 85%;
+}
+
+.plus {
+  position: absolute;
+  top: 30%;
+  right: 0.5%;
+}
+
+.plus:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

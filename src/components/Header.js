@@ -16,7 +16,7 @@ export default class Header extends Component {
     return (
       <div className="row">
         <div className="HeaderContainer">
-            <div className="title">N.E.F.T</div>
+            <div className="headerTitle">N.E.F.T</div>
             <div className="subTitle">- Taking education to the next level</div>
             <div className="LogoContainer">
                 <img src={this.props.logo} alt="logo"/>

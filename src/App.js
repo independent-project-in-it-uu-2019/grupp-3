@@ -7,6 +7,7 @@ import StartPage from './components/startPage';
 import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
 import SmallInfoBox from './components/smallInfoBox'
+import SmallInfoTech from './components/infoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
@@ -25,4 +26,3 @@ class App extends Component {
 }
 
 export default App;
-

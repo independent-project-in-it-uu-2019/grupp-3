@@ -22,7 +22,7 @@ export default class SmallInfoBox extends Component {
             <p>{this.props.Text}</p>
           </div>
           <div>
-            <div className="seperator" style={{height: "100%"}}/>
+            <div class="headerDivider"></div>
             <div className="plus">
               <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
             </div>

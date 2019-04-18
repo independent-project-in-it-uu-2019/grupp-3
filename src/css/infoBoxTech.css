@@ -34,6 +34,7 @@
   font-family: 'LucidaGrande';
   overflow: hidden;
   height: 50%;
+  padding-bottom: 10px;
 }
 
 .ReadMoreButton {
@@ -52,8 +53,8 @@
 }
 
 .seperator{
-  border: 0.5px solid #494d4b;
+  border: 0.5px solid #4a4d4c;
   width: 100%;
-  margin-top: 90%;
   position: absolute;
+  top: 95%;
 }

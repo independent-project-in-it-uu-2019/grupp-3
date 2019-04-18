@@ -30,9 +30,9 @@ export default class SmallInfoTech extends Component {
               </button>
             </div>
           </div>
-          <div>
-            <p className="seperator"/>
-          </div>
+        </div>
+        <div>
+          <p className="seperator"/>
         </div>
       </div>
     )

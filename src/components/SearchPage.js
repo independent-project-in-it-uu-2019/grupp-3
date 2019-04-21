@@ -1,55 +1,50 @@
-import React, {Component} from 'react';
-import {Dropdown} from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Dropdown, Grid } from 'semantic-ui-react'
 
+import '../css/searchPage.css'
 
-const options1 = [
-    {key: 'angular', text: 'Angular', value: 'angular'},
-    {key: 'css', text: 'CSS', value: 'css'},
-    {key: 'design', text: 'Graphic Design', value: 'design'},
-    {key: 'ember', text: 'Ember', value: 'ember'},
-    {key: 'html', text: 'HTML', value: 'html'},
-    {key: 'ia', text: 'Information Architecture', value: 'ia'},
-    {key: 'javascript', text: 'Javascript', value: 'javascript'},
-    {key: 'mech', text: 'Mechanical Engineering', value: 'mech'},
-    {key: 'meteor', text: 'Meteor', value: 'meteor'},
-    {key: 'node', text: 'NodeJS', value: 'node'},
-    {key: 'plumbing', text: 'Plumbing', value: 'plumbing'},
-    {key: 'python', text: 'Python', value: 'python'},
-    {key: 'rails', text: 'Rails', value: 'rails'},
-    {key: 'react', text: 'React', value: 'react'},
-    {key: 'repair', text: 'Kitchen Repair', value: 'repair'},
-    {key: 'ruby', text: 'Ruby', value: 'ruby'},
-    {key: 'ui', text: 'UI Design', value: 'ui'},
-    {key: 'ux', text: 'User Experience', value: 'ux'},
-]
-const options2 = [
-    {key: 'angular', text: 'Angular', value: 'angular'},
-    {key: 'css', text: 'CSS', value: 'css'},
-    {key: 'design', text: 'Graphic Design', value: 'design'},
-    {key: 'ember', text: 'Ember', value: 'ember'},
-    {key: 'html', text: 'HTML', value: 'html'},
-    {key: 'ia', text: 'Information Architecture', value: 'ia'},
-    {key: 'javascript', text: 'Javascript', value: 'javascript'},
-    {key: 'mech', text: 'Mechanical Engineering', value: 'mech'},
-    {key: 'meteor', text: 'Meteor', value: 'meteor'},
-    {key: 'node', text: 'NodeJS', value: 'node'},
-    {key: 'plumbing', text: 'Plumbing', value: 'plumbing'},
-    {key: 'python', text: 'Python', value: 'python'},
-    {key: 'rails', text: 'Rails', value: 'rails'},
-    {key: 'react', text: 'React', value: 'react'},
-    {key: 'repair', text: 'Kitchen Repair', value: 'repair'},
-    {key: 'ruby', text: 'Ruby', value: 'ruby'},
-    {key: 'ui', text: 'UI Design', value: 'ui'},
-    {key: 'ux', text: 'User Experience', value: 'ux'},
-]
+class DropdownExampleRemote extends Component {
+    componentWillMount() {
+        this.setState({
+            options: [
+                { key: 1, text: 'Nummer 1', value: 'Nummer 1' },
+                { key: 2, text: 'Nummer 2', value: 'Nummer 2' },
+                { key: 3, text: 'Nummer 3', value: 'Nummer 3' },
+            ],
+            options2: [
+                { key: 1, text: 'SUNDAY', value: 'SUNDAY' },
+                { key: 2, text: 'MONDAY', value: 'MONDAY' },
+                { key: 3, text: 'TUESDAY', value: 'TUESDAY' },
+            ],
+            value: '',
+            member: '',
+            hour: '',
+        })
+    }
 
-const DropdownExampleMultipleSelection = () => {
-    return (
-        <Dropdown placeholder='Cost' fluid multiple selection options={options1}>
-        </Dropdown>,
-            <Dropdown placeholder='Platform' fluid multiple selection options={options2}>
-            </Dropdown>
-    )
-};
+    render() {
+        const {options, options2, value } = this.state
 
-export default DropdownExampleMultipleSelection
+        return (
+            <Grid>
+                <Grid.Column width={2}>
+                    <Dropdown placeholder='Cost' className={"ownDropdown"} fluid multiple selection options={options} />
+                </Grid.Column>
+                <Grid.Column width={2}>
+                    <Dropdown placeholder='Platform' className={"ownDropdown"} fluid multiple selection options={options} />
+                </Grid.Column>
+                <Grid.Column width={2}>
+                    <Dropdown placeholder='Hardware' className={"ownDropdown"} fluid multiple selection options={options} />
+                </Grid.Column>
+                <Grid.Column width={2}>
+                    <Dropdown placeholder='Misc' className={"ownDropdown"} fluid multiple selection options={options} />
+                </Grid.Column>
+                <Grid.Column width={2}>
+                    <Dropdown placeholder='Education' className={"ownDropdown"} fluid multiple selection options={options} />
+                </Grid.Column>
+            </Grid>
+        )
+    }
+}
+
+export default DropdownExampleRemote

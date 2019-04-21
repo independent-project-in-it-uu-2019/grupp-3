@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CircleImage from './CircleImage'
 import '../css/infoBoxTech.css'
 
 export default class SmallInfoTech extends Component {
@@ -16,7 +17,7 @@ export default class SmallInfoTech extends Component {
         <div className="SmallInfoTech">
           <div class="row">
             <div class="col-sm-4">
-              Här ska bilden ligga
+              <CircleImage height="80%" width="90%" imageURL={this.props.imageURL}/>
             </div>
             <div class="col-sm-8">
               <div onClick={this.onItemClick} className="SmallInfoTechTitle">

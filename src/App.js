@@ -9,12 +9,12 @@ import MoreInfo from './components/MoreInfo';
 import SmallInfoBox from './components/smallInfoBox'
 import SmallInfoTech from './components/infoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import BackgroundImageCircle from './images/ananas.jpg'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <MoreInfo/>
             </div>
         );
     }

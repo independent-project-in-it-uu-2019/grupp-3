@@ -31,15 +31,16 @@ export class MoreInfo extends Component {
         }
     }
 
-    //Fetch info about technique/tool
-
+    componentDidUpdate() {
+        //Do the database query here
+    }
     render() {
         return (
             <div>
                 <Header headerImg={(headerImg)} logo={(logo)}/>
                 <div className="container">
                 <div className="row">
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 goBack">
                         <Button text="Go back" width={150} height={40}/>
                     </div>
                     <div className="col-sm-4">
@@ -52,7 +53,7 @@ export class MoreInfo extends Component {
                         <p className="bodyText">{this.state.description}</p>
                     </div>
                 </div>
-                <p className="seperator"/> 
+                <p className="footerSeperator"/> 
                 <Footer data={this.state.data}/>
                 </div>
             </div>

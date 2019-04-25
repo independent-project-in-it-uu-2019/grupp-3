@@ -8,7 +8,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Button from './Button'
 
-import {getAllMethods, getAllTools}from '../helpers/database'
+import {getAllMethods, getAllTools} from '../helpers/database'
 
 import '../css/moreInfo.css'
 
@@ -35,7 +35,7 @@ export class MoreInfo extends Component {
 
     async componentWillMount() {
         //Do the database query here
-        var data = await getAllMethods(1);
+        var data = await getAllMethods();
         console.log(data);
     }
     render() {

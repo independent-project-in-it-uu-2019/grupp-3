@@ -12,12 +12,12 @@
  position: relative;
 }
 
-.seperator{
-  border-right: 3px solid rgba(232, 249, 246, 0.50);
-  position: absolute;
-  top: 0;
-  right: 88px;
-
+.headerDivider {
+     border-left: 1px solid rgba(232, 249, 246, 0.50);
+     height: 100%;
+     position: absolute;
+     right: 25%;
+     top:0;
 }
 
 .smallInfoBoxTitle {
@@ -40,7 +40,7 @@
   text-align: left;
   font-family: 'LucidaGrande';
   overflow: hidden;
-  width: 85%;
+  width: 75%;
 }
 
 .plus {

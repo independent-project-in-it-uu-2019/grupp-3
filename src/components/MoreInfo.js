@@ -8,6 +8,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Button from './Button'
 
+import {getAllMethods, getAllTools} from '../helpers/database'
+
 import '../css/moreInfo.css'
 
 
@@ -31,15 +33,18 @@ export class MoreInfo extends Component {
         }
     }
 
-    //Fetch info about technique/tool
-
+    async componentWillMount() {
+        //Do the database query here
+        var data = await getAllMethods();
+        console.log(data);
+    }
     render() {
         return (
             <div>
                 <Header headerImg={(headerImg)} logo={(logo)}/>
                 <div className="container">
                 <div className="row">
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 goBack">
                         <Button text="Go back" width={150} height={40}/>
                     </div>
                     <div className="col-sm-4">
@@ -52,7 +57,7 @@ export class MoreInfo extends Component {
                         <p className="bodyText">{this.state.description}</p>
                     </div>
                 </div>
-                <p className="seperator"/> 
+                <p className="footerSeperator"/> 
                 <Footer data={this.state.data}/>
                 </div>
             </div>

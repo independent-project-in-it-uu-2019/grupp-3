@@ -5,6 +5,7 @@ import logo from './images/UU_LOGO.png'
 import Header from './components/Header'
 import StartPage from './components/startPage';
 import SearchPage from './components/SearchPage';
+import StartPageInfo from './components/StartPageInfo';
 import MoreInfo from './components/MoreInfo';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
@@ -12,7 +13,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <MoreInfo/>
             </div>
         );
     }

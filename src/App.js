@@ -5,7 +5,10 @@ import logo from './images/UU_LOGO.png'
 import Header from './components/Header'
 import StartPage from './components/startPage';
 import SearchPage from './components/SearchPage';
+import StartPageInfo from './components/StartPageInfo';
 import MoreInfo from './components/MoreInfo';
+import SmallInfoBox from './components/smallInfoBox'
+import SmallInfoTech from './components/infoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
@@ -24,4 +27,3 @@ class App extends Component {
 }
 
 export default App;
-

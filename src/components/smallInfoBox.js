@@ -5,30 +5,41 @@ import Plus from '../svg/plus.svg'
 export default class SmallInfoBox extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      isExpanded: false,
+    }
+
+    this.toggleExpansion = this.toggleExpansion.bind(this);
   }
 
-  onItemClick(){
-    alert("Not implemented yet!");
+  toggleExpansion() {
+    this.setState({isExpanded: !this.state.isExpanded});
   }
 
   render() {
     return (
-    <div className="col-sm-6">
-    <div className="smallInfoBox" >
-          <div onClick={this.onItemClick} className="smallInfoBoxTitle">
-            <h2>{this.props.Title}</h2>
-          </div>
-          <div className="smallInfoBoxText">
-            <p>{this.props.Text}</p>
-          </div>
-          <div>
-            <div class="headerDivider"></div>
-            <div className="plus">
-              <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
+    <div className="col-6">
+    <div className="boxContainer row" style={{maxHeight: this.state.isExpanded ? 500: null}}>
+    <div className="smallInfoBox d-flex flex-row">
+          <div className="textGroup headerDivider col-9" style={{maxHeight: this.state.isExpanded ? 500: null}}>
+            <div onClick={this.onItemClick} className="smallInfoBoxTitle">
+              <h2>{this.props.Title}</h2>
+            </div>
+            <div className="smallInfoBoxText">
+              <p style={{width: "80%"}}>{this.props.Text}</p>
             </div>
           </div>
+          <div id="rotate" onClick={this.toggleExpansion} className="plusContainer col-3"
+                style={{transform: this.state.isExpanded ? "rotate(45deg)":"rotate(0)"}}>
+            <img src={Plus} style={{height: "90%", width: "90%", alignSelf: "center"}}/>
+          </div>
+    </div>
     </div>
     </div>
     )
   }
 }
+
+//              <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
+

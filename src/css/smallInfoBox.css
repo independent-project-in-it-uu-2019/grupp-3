@@ -3,21 +3,26 @@
     src: './fonts/lucida-grande/LucidaGrande.ttf';
 }
 
+.boxContainer {
+  max-height: 150px;
+  width: 90%;
+  min-width: 400px;
+  margin-top: 15px;
+  transition: all .2s ease-in-out;
+}
+
 .smallInfoBox {
- margin-top: 10px;
- margin-left: 10px;
- width: 90%;
- background-image: linear-gradient(to right, #0E6251, #17A589);
- border-radius: 10px;
- position: relative;
+  margin-left: 10px;
+  background-image: linear-gradient(to right, #0E6251, #17A589);
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 1px 1px 10px black;
+  min-width: 100%;
+  width: 100%;
 }
 
 .headerDivider {
-     border-left: 1px solid rgba(232, 249, 246, 0.50);
-     height: 100%;
-     position: absolute;
-     right: 25%;
-     top:0;
+  border-right: 3px solid rgba(232, 249, 246, 0.50);
 }
 
 .smallInfoBoxTitle {
@@ -25,8 +30,7 @@
   text-align: left;
   text-decoration: underline #E8F8F5;
   font-family: 'LucidaGrande';
-  margin-left: 2%;
-  width: 85%;
+  width: 100%;
 }
 
 .smallInfoBoxTitle h2:hover {
@@ -39,17 +43,31 @@
   color: #E8F8F5;
   text-align: left;
   font-family: 'LucidaGrande';
-  overflow: hidden;
-  width: 75%;
+  width: 100%;
+  height: 100%;
+  overflow-y: none;
+  overflow-x: hidden;
 }
 
-.plus {
-  position: absolute;
-  top: 30%;
-  right: 0.5%;
+.plusContainer {
+  margin-top: 15px;
+  width: 60%;
+  height: 60%;
+  transition: all .2s ease-in-out;
 }
 
-.plus:hover {
-  transform: scale(1.2);
+.plusContainer.rotate {
+  transform: rotate(45deg);
+}
+
+.plusContainer:hover {
+  transform: scale(1.05, 1.05);
+  animation-duration: 1s;
   cursor: pointer;
+}
+
+.textGroup {
+  width: 67%;
+  max-height: 150px;
+  overflow: hidden;
 }

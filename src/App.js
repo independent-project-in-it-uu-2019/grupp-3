@@ -3,7 +3,7 @@ import './App.css';
 import headerImg from './images/header.jpg'
 import logo from './images/UU_LOGO.png'
 import Header from './components/Header'
-import StartPage from './components/startPage';
+import StartPage from './components/StartPage';
 import SearchPage from './components/SearchPage';
 import StartPageInfo from './components/StartPageInfo';
 import MoreInfo from './components/MoreInfo';

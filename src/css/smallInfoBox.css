@@ -21,6 +21,18 @@
   width: 100%;
 }
 
+.readMore {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.readMore:hover {
+  cursor: pointer;
+  text-decoration: underline #63f0d5;
+  color: #63F0D5;
+}
+
 .headerDivider {
   border-right: 3px solid rgba(232, 249, 246, 0.50);
 }

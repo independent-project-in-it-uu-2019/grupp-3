@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
 
+import Button from './Button'
+
 export default class SmallInfoBox extends Component {
   constructor(props) {
     super(props);
@@ -11,10 +13,16 @@ export default class SmallInfoBox extends Component {
     }
 
     this.toggleExpansion = this.toggleExpansion.bind(this);
+    this.handleReadMore = this.handleReadMore.bind(this);
   }
 
   toggleExpansion() {
     this.setState({isExpanded: !this.state.isExpanded});
+  }
+
+  handleReadMore(title) {
+    console.log("Clicked read more");
+    //Navigate user to landing page of item
   }
 
   render() {
@@ -23,11 +31,12 @@ export default class SmallInfoBox extends Component {
     <div className="boxContainer row" style={{maxHeight: this.state.isExpanded ? 500: null}}>
     <div className="smallInfoBox d-flex flex-row">
           <div className="textGroup headerDivider col-9" style={{maxHeight: this.state.isExpanded ? 500: null}}>
-            <div onClick={this.onItemClick} className="smallInfoBoxTitle">
+            <div onClick={() => this.handleReadMore(this.props.Title)} className="smallInfoBoxTitle">
               <h2>{this.props.Title}</h2>
             </div>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
+              <p className="readMore" onClick={() => this.handleReadMore(this.props.Title)}>Read More</p>
             </div>
           </div>
           <div id="rotate" onClick={this.toggleExpansion} className="plusContainer col-3"

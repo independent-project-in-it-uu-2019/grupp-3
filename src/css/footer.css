@@ -1,0 +1,21 @@
+@import "./fonts.css";
+@import "./colors.css";
+
+.FooterTitle {
+    font-family: muliSemibold;
+    font-size: 1.8vw;
+}
+
+.FooterBody {
+    font-family: muliRegular;
+    font-size: 1.2vw;
+}
+
+.Link {
+    color: var(--green9, #ffffff);
+}
+
+.Link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

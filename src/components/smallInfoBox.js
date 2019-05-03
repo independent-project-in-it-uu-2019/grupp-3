@@ -13,21 +13,21 @@ export default class SmallInfoBox extends Component {
 
   render() {
     return (
-    <div className="smallInfoBox" style={{height: 150, width: 500}}>
-          <div className="title">
-            <a onClick={this.onItemClick}>
-              <h2>{this.props.Title}</h2>
-            </a>
+    <div className="col-sm-6">
+    <div className="smallInfoBox" >
+          <div onClick={this.onItemClick} className="smallInfoBoxTitle">
+            <h2>{this.props.Title}</h2>
           </div>
-          <div className="seperator" style={{height: 150}}/>
-          <p>{this.props.Text}</p>
-          <div className="plus">
-            <a onClick={this.onItemClick}>
-              <span>
-                <img src={Plus} style={{height: 70, width: 70}}/>
-              </span>
-            </a>
+          <div className="smallInfoBoxText">
+            <p>{this.props.Text}</p>
           </div>
+          <div>
+            <div class="headerDivider"></div>
+            <div className="plus">
+              <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
+            </div>
+          </div>
+    </div>
     </div>
     )
   }

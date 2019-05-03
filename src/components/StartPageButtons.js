@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import '../css/startPage.css';
+import '../css/StartPageButtons.css';
 
 export class StartPageButtons extends Component {
     render() {
         return (
-            <div role="group" aria-label="ButtonsFrontpage" align="center">
+            <div className="col-md-12 buttonsdiv" role="group" aria-label="ButtonsFrontpage" align="center">
                 <button type="button" className="startbutton">Search</button>
                 <button type="button" className="startbutton">Browse</button>
             </div>

@@ -16,7 +16,6 @@ class App extends Component {
         return (
             <div className="App">
                 <Header headerImg={headerImg} logo={logo}/>
-                <MoreInfo/>
                 <Router>
                     <Route path="/" exact component={StartPage}/>
                     <Route path="/search" exact component={SearchPage}/>

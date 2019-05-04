@@ -7,12 +7,38 @@ import '../css/searchPage.css'
 
 import { getCategorizedKeywords } from '../helpers/database'
 
+const mockData = [
+    {
+        name: "Tech1",
+        tags: ["Free", "University", "Upper secondary school", "Website", "OSX", "Projector", "Computer"],
+    },
+    {
+        name: "Tech2",
+        tags: ["Free", "University", "Upper secondary school", "Offline", "OSX", "Android", "Whiteboard"],
+    },
+    {
+        name: "Tech3",
+        tags: ["Free (students)", "Kindergarden", "Secondary school", "Offline", "Ubunutu", "OSX", "Clickers", "Computer"],
+    },
+    {
+        name: "Tech4",
+        tags: ["Free (students)", "University", "Upper secondary school", "Website", "Offline", "Windows", "Smartphone", "Computer"],
+    },
+    {
+        name: "Tech5",
+        tags: ["Free"],
+    },
+]
+
 const Search = () => {
     const [cost, setCost] = useState([]);
     const [edu, setEdu] = useState([]);
     const [misc, setMisc] = useState([]);
     const [plat, setPlat] = useState([]);
     const [hard, setHard] = useState([]);
+
+    const [selVal, setSelVal] = useState([]);
+    console.log(selVal);
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         const fetchData = async () => {
@@ -36,40 +62,66 @@ const Search = () => {
         return optionsArray;
     }
 
+    const savedValue = (opt) => {
+        opt.forEach(element => {
+            setSelVal([...selVal, element.label])
+        });
+    }
+
     return (
-        <div className="entireSearch">
-            <div className="container" className="dropdown">
-                <div className="row">
-                    <div className="col-md">
-                        <input type="text" />
+        <div className="container" className="page">
+            <div className="entireSearch">
+                <div className="container" className="dropdown">
+                    <div className="row">
+                        <div className="col-md">
+                            <input type="text" />
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-sm">
-                        <Select options={cost}
-                            isMulti />
+                    <div className="row">
+                        <div className="col-sm">
+                            <Select options={cost}
+                                isMulti
+                                onChange={(opt) => savedValue(opt)}
+                            />
+                        </div>
+                        <div className="col-sm">
+                            <Select options={edu}
+                                isMulti
+                                onChange={(opt) => savedValue(opt)}
+                            />
+                        </div>
+                        <div className="col-sm">
+                            <Select options={misc}
+                                isMulti
+                                onChange={(opt) => savedValue(opt)}
+                            />
+                        </div>
+                        <div className="col-sm">
+                            <Select options={plat}
+                                isMulti
+                                onChange={(opt) => savedValue(opt)}
+                            />
+                        </div>
+                        <div className="col-sm">
+                            <Select options={hard}
+                                isMulti
+                                onChange={(opt) => savedValue(opt)}
+                            />
+                        </div>
                     </div>
-                    <div className="col-sm">
-                        <Select options={edu}
-                            isMulti />
+                    <div className="row">
+                        <button type="button" />
                     </div>
-                    <div className="col-sm">
-                        <Select options={misc}
-                            isMulti />
-                    </div>
-                    <div className="col-sm">
-                        <Select options={plat}
-                            isMulti />
-                    </div>
-                    <div className="col-sm">
-                        <Select options={hard}
-                            isMulti />
-                    </div>
-                </div>
-                <div className="row">
-                    <button type="button" />
                 </div>
             </div>
+            <div className="listwrapper">
+                {
+                    mockData.filter(element => element.tags.some(tag => selVal.some(selectedValue => selectedValue === tag))).map((element, i) => {
+                        return <p> {element.name}</p>
+                    })
+                }
+            </div>
+
         </div>
     )
 }

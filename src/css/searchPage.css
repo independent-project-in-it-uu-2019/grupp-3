@@ -5,8 +5,10 @@
 }
 
 .col-sm{
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .dropdown{

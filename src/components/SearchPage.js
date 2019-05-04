@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import SmallInfoTech from './infoBoxTech'
 
 import '../css/searchPage.css'
 

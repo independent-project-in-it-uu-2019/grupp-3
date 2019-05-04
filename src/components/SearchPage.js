@@ -1,50 +1,77 @@
-import React, { Component } from 'react'
-import { Dropdown, Grid } from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import Select from 'react-select'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import SmallInfoTech from './infoBoxTech'
 
 import '../css/searchPage.css'
 
-class DropdownExampleRemote extends Component {
-    componentWillMount() {
-        this.setState({
-            options: [
-                { key: 1, text: 'Nummer 1', value: 'Nummer 1' },
-                { key: 2, text: 'Nummer 2', value: 'Nummer 2' },
-                { key: 3, text: 'Nummer 3', value: 'Nummer 3' },
-            ],
-            options2: [
-                { key: 1, text: 'SUNDAY', value: 'SUNDAY' },
-                { key: 2, text: 'MONDAY', value: 'MONDAY' },
-                { key: 3, text: 'TUESDAY', value: 'TUESDAY' },
-            ],
-            value: '',
-            member: '',
-            hour: '',
-        })
+import { getCategorizedKeywords } from '../helpers/database'
+
+const Search = () => {
+    const [cost, setCost] = useState([]);
+    const [edu, setEdu] = useState([]);
+    const [misc, setMisc] = useState([]);
+    const [plat, setPlat] = useState([]);
+    const [hard, setHard] = useState([]);
+    // Similar to componentDidMount and componentDidUpdate:
+    useEffect(() => {
+        const fetchData = async () => {
+            var data = await getCategorizedKeywords();
+            console.log(data);
+
+            setCost(dataToOptions(data.Cost));
+            setEdu(dataToOptions(data["Form of education"]));
+            setMisc(dataToOptions(data.Miscellaneous));
+            setPlat(dataToOptions(data.Platform));
+            setHard(dataToOptions(data["Required hardware"]));
+        }
+        fetchData();
+    }, [])
+
+    const dataToOptions = (data) => {
+        const optionsArray = [];
+        data.forEach((element, i) => {
+            optionsArray.push({ label: element, value: i + 1 })
+        });
+        return optionsArray;
     }
 
-    render() {
-        const {options, options2, value } = this.state
-
-        return (
-            <Grid>
-                <Grid.Column width={2}>
-                    <Dropdown placeholder='Cost' className={"ownDropdown"} fluid multiple selection options={options} />
-                </Grid.Column>
-                <Grid.Column width={2}>
-                    <Dropdown placeholder='Platform' className={"ownDropdown"} fluid multiple selection options={options} />
-                </Grid.Column>
-                <Grid.Column width={2}>
-                    <Dropdown placeholder='Hardware' className={"ownDropdown"} fluid multiple selection options={options} />
-                </Grid.Column>
-                <Grid.Column width={2}>
-                    <Dropdown placeholder='Misc' className={"ownDropdown"} fluid multiple selection options={options} />
-                </Grid.Column>
-                <Grid.Column width={2}>
-                    <Dropdown placeholder='Education' className={"ownDropdown"} fluid multiple selection options={options} />
-                </Grid.Column>
-            </Grid>
-        )
-    }
+    return (
+        <div className="entireSearch">
+            <div className="container" className="dropdown">
+                <div className="row">
+                    <div className="col-md">
+                        <input type="text" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm">
+                        <Select options={cost}
+                            isMulti />
+                    </div>
+                    <div className="col-sm">
+                        <Select options={edu}
+                            isMulti />
+                    </div>
+                    <div className="col-sm">
+                        <Select options={misc}
+                            isMulti />
+                    </div>
+                    <div className="col-sm">
+                        <Select options={plat}
+                            isMulti />
+                    </div>
+                    <div className="col-sm">
+                        <Select options={hard}
+                            isMulti />
+                    </div>
+                </div>
+                <div className="row">
+                    <button type="button" />
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default DropdownExampleRemote
+export default Search

@@ -73,7 +73,7 @@ const Search = () => {
             <div className="entireSearch">
                 <div className="container" className="dropdown">
                     <div className="row">
-                        <div className="col-md">
+                        <div className="col-md-12" align="center" className="search">
                             <input type="text" />
                         </div>
                     </div>
@@ -81,7 +81,7 @@ const Search = () => {
                         <div className="col-sm">
                             <Select options={cost}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => console.log(opt)}
                             />
                         </div>
                         <div className="col-sm">
@@ -109,8 +109,8 @@ const Search = () => {
                             />
                         </div>
                     </div>
-                    <div className="row">
-                        <button type="button" />
+                    <div className="col-md-12" align="center">
+                        <button type="button" className="searchButton">Search</button>
                     </div>
                 </div>
             </div>

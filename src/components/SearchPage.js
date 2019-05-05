@@ -81,7 +81,7 @@ const Search = () => {
                         <div className="col-sm">
                             <Select options={cost}
                                 isMulti
-                                onChange={(opt) => console.log(opt)}
+                                onChange={(opt) => savedValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
@@ -116,9 +116,12 @@ const Search = () => {
             </div>
             <div className="listwrapper">
                 {
-                    mockData.filter(element => element.tags.some(tag => selVal.some(selectedValue => selectedValue === tag))).map((element, i) => {
-                        return <p> {element.name}</p>
+                    mockData.filter(element => selVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
+                        return <p key={element.name}> {element.name}</p>
                     })
+                    /*mockData.filter(element => element.tags.some(tag => selVal.some(selectedValue => selectedValue === tag))).map((element, i) => {
+                        return <p key={element.name}> {element.name}</p>
+                    })*/
                 }
             </div>
 

@@ -41,7 +41,6 @@ export class MoreInfo extends Component {
     render() {
         return (
             <div>
-                <Header headerImg={(headerImg)} logo={(logo)}/>
                 <div className="container">
                 <div className="row">
                     <div className="col-sm-4 goBack">
@@ -57,7 +56,6 @@ export class MoreInfo extends Component {
                         <p className="bodyText">{this.state.description}</p>
                     </div>
                 </div>
-                <p className="footerSeperator"/> 
                 <Footer data={this.state.data}/>
                 </div>
             </div>

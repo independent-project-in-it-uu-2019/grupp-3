@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/StartPageButtons.css';
+import '../css/colors.css'
 
 export class StartPageButtons extends Component {
     render() {

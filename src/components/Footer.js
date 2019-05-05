@@ -32,7 +32,7 @@ export default class Footer extends Component {
         </div>
         <div className="col-sm-4">
             <div className="FooterTitle">About</div>
-            <div className="FooterBody">Developed by:</div>
+            <div className="FooterBody"><b>Developed by:</b></div>
             <div className="FooterBody">David Black-Schaffer</div>
             <div className="FooterBody">Sameh El-Ansary</div>
         </div>

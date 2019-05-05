@@ -36,7 +36,7 @@ export default class SmallInfoBox extends Component {
             </div>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
-              <p className="readMore" onClick={() => this.handleReadMore(this.props.Title)}>Read More</p>
+              <p className="readMore" onClick={() => this.handleReadMore(this.props.Title)}>Read More &#9654;</p>
             </div>
           </div>
           <div id="rotate" onClick={this.toggleExpansion} className="plusContainer col-3"

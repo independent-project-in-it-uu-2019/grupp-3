@@ -5,8 +5,8 @@
 
 .boxContainer {
   max-height: 150px;
-  width: 90%;
-  min-width: 400px;
+  width: 100%;
+  min-width: 500px;
   margin-top: 15px;
   transition: all .2s ease-in-out;
 }

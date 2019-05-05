@@ -10,17 +10,14 @@ import MoreInfo from './components/MoreInfo';
 import SmallInfoBox from './components/smallInfoBox'
 import SmallInfoTech from './components/infoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import AllPage from './components/AllPage'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header headerImg={headerImg} logo={logo}/>
-                <Router>
-                    <Route path="/" exact component={StartPage}/>
-                    <Route path="/search" exact component={SearchPage}/>
-                    <Route path="/more" exact component={MoreInfo}/>
-                </Router>
+                <AllPage/>
+        
             </div>
         );
     }

@@ -7,7 +7,6 @@ export class StartPage extends Component {
         return (
             <div>
                 <StartPageInfo/>
-
                 <StartPageButtons/>
             </div>
         );

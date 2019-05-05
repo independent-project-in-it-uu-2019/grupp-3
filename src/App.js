@@ -10,13 +10,13 @@ import MoreInfo from './components/MoreInfo';
 import SmallInfoBox from './components/smallInfoBox'
 import SmallInfoTech from './components/infoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import AllPage from './components/AllPage'
+import BrowsePage from './components/BrowsePage'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <AllPage/>
+                <BrowsePage/>
         
             </div>
         );

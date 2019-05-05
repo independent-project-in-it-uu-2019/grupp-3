@@ -37,8 +37,12 @@ const Search = () => {
     const [plat, setPlat] = useState([]);
     const [hard, setHard] = useState([]);
 
-    const [selVal, setSelVal] = useState([]);
-    console.log(selVal);
+    const [selCostVal, setSelCostVal] = useState([]);
+    const [selEduVal, setSelEduVal] = useState([]);
+    const [selMiscVal, setSelMiscVal] = useState([]);
+    const [selPlatVal, setSelPlatVal] = useState([]);
+    const [selHardVal, setSelHardVal] = useState([]);
+    const [selTotalVal, setSelTotalVal] = useState([]);
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         const fetchData = async () => {
@@ -53,7 +57,7 @@ const Search = () => {
         }
         fetchData();
     }, [])
-
+    console.log('TITTA HÄR', selTotalVal);
     const dataToOptions = (data) => {
         const optionsArray = [];
         data.forEach((element, i) => {
@@ -62,11 +66,63 @@ const Search = () => {
         return optionsArray;
     }
 
-    const savedValue = (opt) => {
+    const savedCostValue = (opt) => {
+        const labelArray = [];
         opt.forEach(element => {
-            setSelVal([...selVal, element.label])
+            labelArray.push(element.label)
         });
+    
+        setSelCostVal(labelArray);
     }
+
+    const savedEduValue = (opt) => {
+        const labelArray = [];
+        opt.forEach(element => {
+            labelArray.push(element.label)
+        });
+    
+        setSelEduVal(labelArray);
+    }
+
+    const savedMiscValue = (opt) => {
+        const labelArray = [];
+        opt.forEach(element => {
+            labelArray.push(element.label)
+        });
+    
+        setSelMiscVal(labelArray);
+    }
+
+    const savedPlatValue = (opt) => {
+        const labelArray = [];
+        opt.forEach(element => {
+            labelArray.push(element.label)
+        });
+    
+        setSelPlatVal(labelArray);
+    }
+
+    const savedHardValue = (opt) => {
+        const labelArray = [];
+        opt.forEach(element => {
+            labelArray.push(element.label)
+        });
+    
+        setSelHardVal(labelArray);
+    }
+
+    /*handleOnChange(value) {
+        let difference = this.state.selected.filter(x => !value.includes(x)); // calculates diff
+        console.log('Removed: ', difference);                         // prints array of removed
+      
+        this.setState({ selected: value });
+      }*/
+    const filterMerge = () => {
+        console.log(selCostVal, selEduVal, selHardVal, selMiscVal, selPlatVal);
+        setSelTotalVal([...selCostVal, ...selEduVal, ...selHardVal, ...selMiscVal, ...selPlatVal]);
+        console.log('selTotalVal', selTotalVal);
+    }
+
 
     return (
         <div className="container" className="page">
@@ -81,42 +137,44 @@ const Search = () => {
                         <div className="col-sm">
                             <Select options={cost}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => savedCostValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={edu}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => savedEduValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={misc}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => savedMiscValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={plat}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => savedPlatValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={hard}
                                 isMulti
-                                onChange={(opt) => savedValue(opt)}
+                                onChange={(opt) => savedHardValue(opt)}
                             />
                         </div>
                     </div>
                     <div className="col-md-12" align="center">
-                        <button type="button" className="searchButton">Search</button>
+                        <button type="button" className="searchButton"
+                            onClick={() => filterMerge()}
+                        >Search</button>
                     </div>
                 </div>
             </div>
             <div className="listwrapper">
                 {
-                    mockData.filter(element => selVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
+                    mockData.filter(element => selTotalVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
                         return <p key={element.name}> {element.name}</p>
                     })
                     /*mockData.filter(element => element.tags.some(tag => selVal.some(selectedValue => selectedValue === tag))).map((element, i) => {

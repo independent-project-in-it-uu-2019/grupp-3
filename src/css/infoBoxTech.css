@@ -5,15 +5,15 @@
  margin-top: 50px;
  margin-left: 50px;
  width: 90%;
-<<<<<<< HEAD
  height: 250px;
  background-color: var(--green1, red);
  position: relative;
-=======
  max-height: 250px;
  background-color: #E8F8F5;
  display: flex;
->>>>>>> master
+ height: 250px;
+ background-color: var(--green1, red);
+ position: relative;
 }
 
 .SmallInfoTechTitle {
@@ -54,13 +54,12 @@
 }
 
 .ReadMoreButton:hover {
-<<<<<<< HEAD
-    background-color: var(--green10, red);
-    text-decoration: underline white;
-=======
+  background-color: var(--green10, red);
+  text-decoration: underline white;
+  background-color: var(--green10, red);
+  text-decoration: underline white;
   background-color: #0B5345;
   text-decoration: underline white;
->>>>>>> master
 }
 
 .seperator{

@@ -27,8 +27,8 @@
 
 .readMore:hover {
   cursor: pointer;
-  text-decoration: underline var(--green10, red);
-  color: var(--green10, red);
+  text-decoration: underline var(--green5, red);
+  color: var(--green5, red);
 }
 
 .headerDivider {

@@ -1,9 +1,9 @@
 .startbutton {
     background-color: #138D75;
     border-radius: 20px;
-    font-size: 30px;
-    padding: 30px 40px;
-    margin: 30px 70px;
+    font-size: 20px;
+    padding: 20px 30px;
+    margin: 10px 50px;
     border:none;
     text-transform: uppercase;
     color: white;
@@ -13,6 +13,6 @@
 }
 
 .buttonsdiv{
-    padding: 50px;
+    padding-top: 20px;
 }
 

@@ -8,7 +8,7 @@ import logo from '../images/UU_LOGO.png'
 
 import {getAllMethods, getAllTools} from '../helpers/database'
 
-export default class AllPage extends Component {
+export default class BrowsePage extends Component {
     constructor(props) {
         super(props);
         this.state = {

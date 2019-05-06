@@ -14,7 +14,7 @@ export class StartPageInfo extends Component {
     renderImageRight() {
         return (
             <div className="row justify-content-center align-items-center">
-                <div className="col-md-7">
+                <div className="col-md-5">
                     <div className="col-md-6 d-md-none" align="center">
                         <CircleImage width={"50vw"} height={"50vw"} imageURL={require('../images/ananas.jpg')}/>
                     </div>
@@ -41,7 +41,7 @@ export class StartPageInfo extends Component {
                         <CircleImage width={"14vw"} height={"14vw"} imageURL={require('../images/ananas.jpg')}/>
                     </div>
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-5">
                     <div className="col-md-6 d-md-none" align="center">
                         <CircleImage width={"50vw"} height={"50vw"} imageURL={require('../images/ananas.jpg')}/>
                     </div>

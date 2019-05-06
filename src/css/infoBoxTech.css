@@ -2,12 +2,18 @@
 @import './colors.css';
 
 .SmallInfoTech {
- margin-top: 10px;
- margin-left: 10px;
+ margin-top: 50px;
+ margin-left: 50px;
  width: 90%;
+<<<<<<< HEAD
  height: 250px;
  background-color: var(--green1, red);
  position: relative;
+=======
+ max-height: 250px;
+ background-color: #E8F8F5;
+ display: flex;
+>>>>>>> master
 }
 
 .SmallInfoTechTitle {
@@ -33,6 +39,7 @@
   overflow: hidden;
   height: 50%;
   padding-bottom: 10px;
+  max-height: 150px;
 }
 
 .ReadMoreButton {
@@ -43,16 +50,29 @@
   text-transform: uppercase;
   color: white;
   text-align: center;
+  margin-top: 10px;
 }
 
 .ReadMoreButton:hover {
+<<<<<<< HEAD
     background-color: var(--green10, red);
     text-decoration: underline white;
+=======
+  background-color: #0B5345;
+  text-decoration: underline white;
+>>>>>>> master
 }
 
 .seperator{
   border: 0.5px solid #4a4d4c;
-  width: 90%;
-  position: absolute;
-  top: 95%;
+  width: 100%;
+  margin: 10px;
+  margin-top: 10px;
+}
+
+.test {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  justify-self: center;
 }

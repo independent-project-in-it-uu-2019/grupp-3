@@ -13,13 +13,12 @@ export default class SmallInfoTech extends Component {
 
   render() {
     return (
-      <div className="col-sm-6">
+      <div>
         <div className="SmallInfoTech">
-          <div class="row">
-            <div class="col-sm-4">
-              <CircleImage height="80%" width="90%" imageURL={this.props.imageURL}/>
+            <div className="col-4 test">
+                <CircleImage height="90%" width="90%" imageURL={this.props.imageURL}/>
             </div>
-            <div class="col-sm-8">
+            <div class="col-8">
               <div onClick={this.onItemClick} className="SmallInfoTechTitle">
                 <h2>{this.props.Title}</h2>
               </div>
@@ -29,12 +28,9 @@ export default class SmallInfoTech extends Component {
               <button onClick={this.onItemClick} type="button btn-xs" className="ReadMoreButton">
                   Read More &#9654;
               </button>
+                <p className="seperator"/>
             </div>
           </div>
-        </div>
-        <div>
-          <p className="seperator"/>
-        </div>
       </div>
     )
   }

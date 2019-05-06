@@ -1,3 +1,4 @@
+@import './colors.css';
 .CircleImage {
     box-shadow: 0px 0px 5px black;
 }

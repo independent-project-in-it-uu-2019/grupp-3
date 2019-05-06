@@ -13,6 +13,7 @@ export class StartPageInfo extends Component {
 
     renderImageRight() {
         return (
+            <div classname="imgright">
             <div className="row justify-content-center align-items-center">
                 <div className="col-md-5">
                     <div className="col-md-6 d-md-none" align="center">
@@ -29,6 +30,7 @@ export class StartPageInfo extends Component {
                         <CircleImage width={"14vw"} height={"14vw"} imageURL={require('../images/ananas.jpg')}/>
                     </div>
                 </div>
+            </div>
             </div>
         )
     }
@@ -47,7 +49,7 @@ export class StartPageInfo extends Component {
                     </div>
                     <h1>Headline</h1>
                     <p className="bodyText">N.E.F.T is your help to improve your lectures and classes by providing
-                        tools to digitalize your content. It will make your classes more
+                        tools to digitalize jjjjsses more
                         available to students and let them consume the material in their own.
                         phase.</p>
                 </div>

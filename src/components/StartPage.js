@@ -8,6 +8,7 @@ export class StartPage extends Component {
             <div>
                 <StartPageButtons/>
                 <StartPageInfo/>
+                <div style={{height:40}}></div>
             </div>
         );
     }

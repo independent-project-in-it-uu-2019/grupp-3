@@ -10,6 +10,7 @@ import MoreInfo from './components/MoreInfo';
 import SmallInfoBox from './components/smallInfoBox'
 import SmallInfoTech from './components/infoBoxTech'
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import BrowsePage from "./components/BrowsePage";
 //import BrowsePage from './components/BrowsePage'
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
                 <Router>
                     <Route path="/" exact component={StartPage} />
                     <Route path="/search" exact component={SearchPage} />
-                    <Route path="/more" exact component={MoreInfo} />
+                    <Route path="/browse" exact component={BrowsePage} />
                 </Router>
                 {/*<BrowsePage />*/}
 

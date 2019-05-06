@@ -1,7 +1,5 @@
-@font-face {
-    font-family: 'LucidaGrande';
-    src: './fonts/lucida-grande/LucidaGrande.ttf';
-}
+@import './fonts.css';
+@import './colors.css';
 
 .boxContainer {
   max-height: 150px;
@@ -13,7 +11,7 @@
 
 .smallInfoBox {
   margin-left: 10px;
-  background-image: linear-gradient(to right, #0E6251, #17A589);
+  background-image: linear-gradient(to right, var(--green10, red), var(--green7, red));
   border-radius: 10px;
   height: 100%;
   box-shadow: 1px 1px 10px black;
@@ -29,8 +27,8 @@
 
 .readMore:hover {
   cursor: pointer;
-  text-decoration: underline #63f0d5;
-  color: #63F0D5;
+  text-decoration: underline var(--green5, red);
+  color: var(--green5, red);
 }
 
 .headerDivider {
@@ -38,23 +36,23 @@
 }
 
 .smallInfoBoxTitle {
-  color: #E8F8F5;
+  color: var(--green1, red);
   text-align: left;
-  text-decoration: underline #E8F8F5;
-  font-family: 'LucidaGrande';
+  text-decoration: underline var(--green1, red);
+  font-family: muliSemibold;
   width: 100%;
 }
 
 .smallInfoBoxTitle h2:hover {
-  color: #63F0D5;
-  text-decoration: underline #63f0d5;
+  color: var(--green5, red);
+  text-decoration: underline var(--green5, red);
   cursor: pointer;
 }
 
 .smallInfoBoxText {
-  color: #E8F8F5;
+  color: var(--green1, red);
   text-align: left;
-  font-family: 'LucidaGrande';
+  font-family: muliSemibold;
   width: 100%;
   height: 100%;
   overflow-y: none;

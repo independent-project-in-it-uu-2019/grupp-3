@@ -1,5 +1,5 @@
 .startbutton {
-    background-color: #138D75;
+    background-color: var(--green8, #138D75);
     border-radius: 20px;
     font-size: 20px;
     padding: 20px 30px;
@@ -9,7 +9,7 @@
     color: white;
 }
 .startbutton:hover {
-    background-color: #0B5345;
+    background-color: var(--green10, #138D75);
 }
 
 .buttonsdiv{

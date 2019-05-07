@@ -1,5 +1,4 @@
 .bodyText {
-    padding-top: 30px;
     padding-left: 30px;
     padding-right: 15px;
     font-size: 1.5em;
@@ -13,3 +12,6 @@ div.CircleImage {
     padding: 10px;
 }
 
+.imgright{
+    padding: 100px;
+}

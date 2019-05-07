@@ -11,7 +11,8 @@
     --green10: #0E6251;
 }
 
-/* Reference there by importing:
+/* Reference by:
 in yourclass.JS: import '../css/colors.css'
-in yourclass.CSS: background-color: var(--maingreen, #138D75); where second argument is fallback value and optional
+in yourclass.CSS: background-color: var(--green1, #138D75); where second argument is fallback value and optional
+1 is the lightest -> 10 is the darkest
  */

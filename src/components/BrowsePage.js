@@ -14,8 +14,7 @@ const titleStyle = {fontSize: 40,
                     textAlign:"center",
                     color: "#494949"    
                 };
-
-export default class AllPage extends Component {
+export default class BrowsePage extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import headerImg from './images/header.jpg'
 import logo from './images/UU_LOGO.png'
@@ -23,7 +23,6 @@ class App extends Component {
                     <Route path="/:type/:id" exact component={MoreInfo}/>
                     <Route path="/Browse" exact component={BrowsePage}/>
                 </Router>
-
             </div>
         );
     }

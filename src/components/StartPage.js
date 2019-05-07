@@ -6,8 +6,9 @@ export class StartPage extends Component {
     render() {
         return (
             <div>
-                <StartPageInfo/>
                 <StartPageButtons/>
+                <StartPageInfo/>
+                <div style={{height:40}}></div>
             </div>
         );
     }

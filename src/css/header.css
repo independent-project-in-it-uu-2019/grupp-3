@@ -1,3 +1,4 @@
+@import './colors.css';
 .HeaderContainer {
     width: 100%;
     position: relative;
@@ -5,7 +6,7 @@
 
 .ImgContainer img {
     width: 100%;
-    height: 400px;
+    height: 200px;
     display: block;
     object-fit: cover;
     box-shadow: 0px 1px 3px black;
@@ -31,8 +32,8 @@
 }
 
 .LogoContainer img{
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     margin-left: 5px;
     margin-top: 15px;
 }
@@ -44,7 +45,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     color: white;
-    font-size: 10vw;
+    font-size: 5vw;
     font-family: muliExtraBold;
     text-shadow: 1px 1px 3px black;
   }
@@ -56,7 +57,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     color: white;
-    font-size: 2.8vw;
+    font-size: 1.8vw;
     font-family: muliExtraBoldItalic;
     text-shadow: 1px 1px 3px black;
   }

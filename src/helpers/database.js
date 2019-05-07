@@ -34,6 +34,11 @@ export function getToolInfo(toolID) {
     return fetchData(url);
 }
 
+export function getMethodInfo(methodID) {
+    var url = "http://www2.teknat.uu.se/TLT/database_connect/get/get_method?Method_ID=" + methodID;
+    return fetchData(url);
+}
+
 export function getAllKeywords() {
     var url = "http://www2.teknat.uu.se/TLT/database_connect/get/get_current_keywords.php";
     return fetchData(url);

@@ -15,7 +15,7 @@
 }
 
 .Link {
-    color: var(--green9, #ffffff);
+    color: var(--linkColor, #ffffff);
 }
 
 .Link:hover {

@@ -1,64 +1,62 @@
-@font-face {
-    font-family: 'LucidaGrande';
-    src: './fonts/lucida-grande/LucidaGrande.ttf';
-}
+@import './fonts.css';
+@import './colors.css';
 
 .boxContainer {
   max-height: 150px;
   width: 100%;
   min-width: 500px;
-  margin-top: 15px;
+  margin-top: 30px;
   transition: all .2s ease-in-out;
 }
 
 .smallInfoBox {
   margin-left: 10px;
-  background-image: linear-gradient(to right, #0E6251, #17A589);
+  background-color: var(--background3, red);
   border-radius: 10px;
   height: 100%;
   box-shadow: 1px 1px 10px black;
   min-width: 100%;
   width: 100%;
+  overflow-y: none;
+  overflow-x: hidden;
 }
 
 .readMore {
   text-align: center;
-  text-decoration: underline;
   font-size: 20px;
+  color: var(--textColor, gray);
 }
 
 .readMore:hover {
   cursor: pointer;
-  text-decoration: underline #63f0d5;
-  color: #63F0D5;
+  text-decoration: underline;
+  color: var(--textHover, red);
 }
 
 .headerDivider {
-  border-right: 3px solid rgba(232, 249, 246, 0.50);
+  border-right: 3px solid rgba(245, 183, 177, 0.5);
 }
 
 .smallInfoBoxTitle {
-  color: #E8F8F5;
+  color: var(--textColor, red);
   text-align: left;
-  text-decoration: underline #E8F8F5;
-  font-family: 'LucidaGrande';
+  text-decoration: underline var(--textColor, red);
+  font-family: muliSemibold;
   width: 100%;
 }
 
 .smallInfoBoxTitle h2:hover {
-  color: #63F0D5;
-  text-decoration: underline #63f0d5;
+  color: var(--textHover, red);
+  text-decoration: underline var(--textHover, red);
   cursor: pointer;
 }
 
 .smallInfoBoxText {
-  color: #E8F8F5;
+  color: var(--textColor, red);
   text-align: left;
-  font-family: 'LucidaGrande';
+  font-family: muliSemibold;
   width: 100%;
   height: 100%;
-  overflow-y: none;
-  overflow-x: hidden;
 }
 
 .plusContainer {

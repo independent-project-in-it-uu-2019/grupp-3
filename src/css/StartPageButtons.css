@@ -1,18 +1,18 @@
 .startbutton {
-    background-color: #138D75;
+    background-color: var(--buttonColor, #138D75);
     border-radius: 20px;
-    font-size: 30px;
-    padding: 30px 40px;
-    margin: 30px 70px;
+    font-size: 20px;
+    padding: 20px 30px;
+    margin: 10px 50px;
     border:none;
+    box-shadow: 2px 5px var(--buttonHover, #138D75);
     text-transform: uppercase;
-    color: white;
+    color: var(--textColor, red);
 }
 .startbutton:hover {
-    background-color: #0B5345;
+    background-color: var(--buttonHover, #138D75);
 }
 
 .buttonsdiv{
-    padding: 50px;
+    padding-top: 20px;
 }
-

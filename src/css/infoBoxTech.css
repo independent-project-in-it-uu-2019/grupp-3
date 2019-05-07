@@ -1,37 +1,35 @@
-@font-face {
-    font-family: 'LucidaGrande';
-    src: './fonts/lucida-grande/LucidaGrande.ttf';
-}
+@import './fonts.css';
+@import './colors.css';
 
 .SmallInfoTech {
- margin-top: 50px;
  margin-left: 50px;
+ margin-bottom: 50px;
  width: 90%;
- max-height: 250px;
- background-color: #E8F8F5;
+ background-color: var(--background1, red);
+ max-height: 150px;
  display: flex;
 }
 
 .SmallInfoTechTitle {
-  color: #4a4d4c;
+  color: var(--textColor, red);
   text-align: left;
-  font-family: 'LucidaGrande';
+  font-family: muliSemibold;
   margin-left: 2%;
   margin-bottom: 0px;
-  width: 85%;
+  width: 95%;
+  max-height: 70px;
 }
 
 .SmallInfoTechTitle h2:hover {
-  color: #63F0D5;
-  text-decoration: underline #63f0d5;
+  color: var(--textHover, red);
+  text-decoration: underline var(--textHover, red);
   cursor: pointer;
 }
 
 .SmallInfoTechText {
-  margin-top: 0px;
-  color: #4a4d4c;
+  color: var(--textColor, red);
   text-align: left;
-  font-family: 'LucidaGrande';
+  font-family: muliSemibold;
   overflow: hidden;
   height: 50%;
   padding-bottom: 10px;
@@ -39,31 +37,30 @@
 }
 
 .ReadMoreButton {
-  background-color: #138D75;
+  background-color: var(--buttonColor, red);
   border-radius: 12px;
   padding: 4px 8px;
   border:none;
+  box-shadow: 2px 5px var(--buttonHover, #138D75);
   text-transform: uppercase;
-  color: white;
+  color: var(--textColor, red);
   text-align: center;
   margin-top: 10px;
 }
 
 .ReadMoreButton:hover {
-  background-color: #0B5345;
-  text-decoration: underline white;
+  background-color: var(--buttonHover, red);
+  text-decoration: underline var(--buttonHover, red);
 }
 
 .seperator{
-  border: 0.5px solid #4a4d4c;
+  border: 0.5px solid var(--textColor, red);;
   width: 100%;
   margin: 10px;
   margin-top: 10px;
 }
 
 .test {
-  width: 200px;
-  height: 200px;
-  align-self: center;
-  justify-self: center;
+  width: 160px;
+  height: 160px;
 }

@@ -2,13 +2,11 @@
 @import './colors.css';
 
 .SmallInfoTech {
- margin-top: 50px;
  margin-left: 50px;
+ margin-bottom: 50px;
  width: 90%;
- height: 250px;
  background-color: var(--background1, red);
- position: relative;
- max-height: 250px;
+ max-height: 150px;
  display: flex;
 }
 
@@ -18,7 +16,8 @@
   font-family: muliSemibold;
   margin-left: 2%;
   margin-bottom: 0px;
-  width: 85%;
+  width: 95%;
+  max-height: 70px;
 }
 
 .SmallInfoTechTitle h2:hover {
@@ -28,7 +27,6 @@
 }
 
 .SmallInfoTechText {
-  margin-top: 0px;
   color: var(--textColor, red);
   text-align: left;
   font-family: muliSemibold;
@@ -63,8 +61,6 @@
 }
 
 .test {
-  width: 200px;
-  height: 200px;
-  align-self: center;
-  justify-self: center;
+  width: 160px;
+  height: 160px;
 }

@@ -23,14 +23,13 @@
 
 .readMore {
   text-align: center;
-  text-decoration: underline;
   font-size: 20px;
-  color: white;
+  color: var(--textColor, gray);
 }
 
 .readMore:hover {
   cursor: pointer;
-  text-decoration: underline var(--textHover, red);
+  text-decoration: underline;
   color: var(--textHover, red);
 }
 

@@ -29,7 +29,7 @@ export default class SmallInfoTech extends Component {
                 <p>{this.props.Text}</p>
               </div>
               <button type="button btn-xs" className="ReadMoreButton">
-                  <Link to={"/method/"+this.props.ID} style={{color: "white"}}><p>Read More &#9654;</p></Link>
+                  <Link to={"/method/"+this.props.ID} style={{color: "var(--textColor, gray)"}}><p>Read More &#9654;</p></Link>
               </button>
                 <p className="seperator"/>
             </div>

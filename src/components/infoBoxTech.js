@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import CircleImage from './CircleImage'
+import PineappleIMG from '../images/ananas.jpg'
 import '../css/infoBoxTech.css'
 
 export default class SmallInfoTech extends Component {
@@ -16,8 +19,8 @@ export default class SmallInfoTech extends Component {
       <div>
         <div className="SmallInfoTech">
             <div className="col-4 test">
-                <CircleImage height="90%" width="90%" imageURL={this.props.imageURL}/>
-            </div>
+                <CircleImage height="80%" width="80%" imageURL={this.props.imageURL ? this.props.imageURL:PineappleIMG}/>
+    </div>
             <div class="col-8">
               <div onClick={this.onItemClick} className="SmallInfoTechTitle">
                 <h2>{this.props.Title}</h2>
@@ -25,8 +28,8 @@ export default class SmallInfoTech extends Component {
               <div className="SmallInfoTechText">
                 <p>{this.props.Text}</p>
               </div>
-              <button onClick={this.onItemClick} type="button btn-xs" className="ReadMoreButton">
-                  Read More &#9654;
+              <button type="button btn-xs" className="ReadMoreButton">
+                  <Link to={"/method/"+this.props.ID} style={{color: "white"}}><p>Read More &#9654;</p></Link>
               </button>
                 <p className="seperator"/>
             </div>

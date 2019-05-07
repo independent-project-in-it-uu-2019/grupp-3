@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
 
 import Button from './Button'
+import MoreInfo from './MoreInfo';
 
 export default class SmallInfoBox extends Component {
   constructor(props) {
@@ -20,23 +23,21 @@ export default class SmallInfoBox extends Component {
     this.setState({isExpanded: !this.state.isExpanded});
   }
 
-  handleReadMore(title) {
+  handleReadMore(ID) {
     console.log("Clicked read more");
-    //Navigate user to landing page of item
+
   }
 
   render() {
     return (
     <div className="col-6">
-    <div className="boxContainer row" style={{maxHeight: this.state.isExpanded ? 500: null}}>
+    <div className="boxContainer row" style={{maxHeight: this.state.isExpanded ? 1000: null}}>
     <div className="smallInfoBox d-flex flex-row">
-          <div className="textGroup headerDivider col-9" style={{maxHeight: this.state.isExpanded ? 500: null}}>
-            <div onClick={() => this.handleReadMore(this.props.Title)} className="smallInfoBoxTitle">
-              <h2>{this.props.Title}</h2>
-            </div>
+          <div className="textGroup headerDivider col-9" style={{maxHeight: this.state.isExpanded ? 1000: null}}>
+              <Link className="smallInfoBoxTitle" to={"/tool/"+this.props.ID}><h2>{this.props.Title}</h2></Link>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
-              <p className="readMore" onClick={() => this.handleReadMore(this.props.Title)}>Read More &#9654;</p>
+              <Link className="readMore" to={"/tool/"+this.props.ID}><p>Read More &#9654;</p></Link>
             </div>
           </div>
           <div id="rotate" onClick={this.toggleExpansion} className="plusContainer col-3"

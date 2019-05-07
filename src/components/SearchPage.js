@@ -177,9 +177,7 @@ const Search = () => {
                     mockData.filter(element => selTotalVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
                         return <p key={element.name}> {element.name}</p>
                     })
-                    /*mockData.filter(element => element.tags.some(tag => selVal.some(selectedValue => selectedValue === tag))).map((element, i) => {
-                        return <p key={element.name}> {element.name}</p>
-                    })*/
+                    
                 }
             </div>
 

@@ -3,7 +3,7 @@
 .title {
    font-family: muliRegular;
    font-size: 3vw;
-   color: #4A4A4A;
+   color: var(--textColor, red);
    margin-top: 10px;
    text-shadow: 0.2px 0.2px 1px black;
 }

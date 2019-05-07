@@ -18,14 +18,14 @@
 
 .searchButton{
     margin: 5px;
-    background-color: #138D75;
+    background-color: var(--buttonColor, red);
     border-radius: 5px;
-    color: white;
+    color: var(--color7, red);
     font-size: 20px;
 }
 
 .searchButton:hover {
-    background-color: #0B5345;
+    background-color: var(--buttonHover, red);
 }
 
 .search{

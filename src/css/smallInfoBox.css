@@ -11,7 +11,7 @@
 
 .smallInfoBox {
   margin-left: 10px;
-  background-image: linear-gradient(to right, var(--green10, red), var(--green7, red));
+  background-color: var(--background1, red);
   border-radius: 10px;
   height: 100%;
   box-shadow: 1px 1px 10px black;
@@ -27,30 +27,30 @@
 
 .readMore:hover {
   cursor: pointer;
-  text-decoration: underline var(--green5, red);
-  color: var(--green5, red);
+  text-decoration: underline var(--textHover, red);
+  color: var(--textHover, red);
 }
 
 .headerDivider {
-  border-right: 3px solid rgba(232, 249, 246, 0.50);
+  border-right: 3px solid rgba(245, 183, 177, 0.5);
 }
 
 .smallInfoBoxTitle {
-  color: var(--green1, red);
+  color: var(--textColor, red);
   text-align: left;
-  text-decoration: underline var(--green1, red);
+  text-decoration: underline var(--textColor, red);
   font-family: muliSemibold;
   width: 100%;
 }
 
 .smallInfoBoxTitle h2:hover {
-  color: var(--green5, red);
-  text-decoration: underline var(--green5, red);
+  color: var(--textHover, red);
+  text-decoration: underline var(--textHover, red);
   cursor: pointer;
 }
 
 .smallInfoBoxText {
-  color: var(--green1, red);
+  color: var(--textColor, red);
   text-align: left;
   font-family: muliSemibold;
   width: 100%;

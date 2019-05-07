@@ -6,8 +6,9 @@
     margin-left: 10px;
     font-family: muliRegular;
     font-size: 1.8vw;
-    background-color: var(--green9, red);
-    color: white;
+    background-color: var(--buttonColor, red);
+    box-shadow: 2px 5px var(--buttonHover, #138D75);
+    color: var(--textColor, red);
     display: flex;
     text-align: center;
     justify-content: center;
@@ -16,6 +17,6 @@
 }
 
 .button:hover {
-    background-color: var(--green10, red);
+    background-color: var(--buttonHover, red);
     cursor: pointer;
 }

@@ -11,7 +11,7 @@
 
 .smallInfoBox {
   margin-left: 10px;
-  background-color: var(--background1, red);
+  background-color: var(--background3, red);
   border-radius: 10px;
   height: 100%;
   box-shadow: 1px 1px 10px black;

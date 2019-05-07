@@ -16,13 +16,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header headerImg={headerImg} logo={logo}/>
                 <Router>
+                <Header headerImg={headerImg} logo={logo}/>
                     <Route path="/" exact component={StartPage}/>
-                    <Route path="/search" exact component={SearchPage}/>
-                    <Route path="/tool/:id" exact component={MoreInfo}/>
-                    <Route path="/browse" exact component={BrowsePage}/>
-                    <Route path="/method/:id" exact component={MoreInfo}/>
+                    <Route path="/Search" exact component={SearchPage}/>
+                    <Route path="/:type/:id" exact component={MoreInfo}/>
+                    <Route path="/Browse" exact component={BrowsePage}/>
                 </Router>
 
             </div>

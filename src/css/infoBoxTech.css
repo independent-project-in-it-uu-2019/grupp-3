@@ -18,7 +18,8 @@
   font-family: 'LucidaGrande';
   margin-left: 2%;
   margin-bottom: 0px;
-  width: 85%;
+  width: 95%;
+  max-height: 70px;
 }
 
 .SmallInfoTechTitle h2:hover {
@@ -63,6 +64,4 @@
 .test {
   width: 160px;
   height: 160px;
-  align-self: center;
-  justify-self: center;
 }

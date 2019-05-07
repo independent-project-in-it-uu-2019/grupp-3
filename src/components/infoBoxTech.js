@@ -22,8 +22,8 @@ export default class SmallInfoTech extends Component {
                 <CircleImage height="80%" width="80%" imageURL={this.props.imageURL ? this.props.imageURL:PineappleIMG}/>
     </div>
             <div class="col-8">
-              <div onClick={this.onItemClick} className="SmallInfoTechTitle">
-                <h2>{this.props.Title}</h2>
+              <div className="SmallInfoTechTitle">
+                <Link to={"/method/"+this.props.ID} style={{color:"#4a4d4c"}}><h2>{this.props.Title}</h2></Link>
               </div>
               <div className="SmallInfoTechText">
                 <p>{this.props.Text}</p>

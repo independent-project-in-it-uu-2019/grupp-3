@@ -4,9 +4,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
 
-import Button from './Button'
-import MoreInfo from './MoreInfo';
-
 export default class SmallInfoBox extends Component {
   constructor(props) {
     super(props);

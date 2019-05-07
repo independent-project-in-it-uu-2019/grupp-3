@@ -1,18 +1,20 @@
 :root{
-    --green1: #E8F8F5;
-    --green2: #D1F2EB;
-    --green3: #A3E4D7;
-    --green4: #76D7C4;
-    --green5: #48C9B0;
-    --green6: #1ABC9C;
-    --green7: #17A589;
-    --green8: #148F77;
-    --green9: #117864;
-    --green10: #0E6251;
+    --background1: #EAEDED; /*Background scale light to dark*/
+    --background2: #EAEDED;
+    --background3: #D5DBDB;
+    --background4: #BFC9CA;
+    --background5: #AAB7B8;
+    --background6: #95A5A6;
+
+    --textColor: #212F3C; /*Text color*/
+    --textHover: #F1948A; /*Hover text color*/
+
+    --buttonColor: #FADBD8; /*Button color*/
+    --buttonHover:#F1948A; /*Hover button color*/
 }
 
 /* Reference by:
-in yourclass.JS: import '../css/colors.css'
-in yourclass.CSS: background-color: var(--green1, #138D75); where second argument is fallback value and optional
+in yourclass.JS: import '../css/color.css'
+in yourclass.CSS: background-color: var(--background, #138D75); where second argument is fallback value and optional
 1 is the lightest -> 10 is the darkest
  */

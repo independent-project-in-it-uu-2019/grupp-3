@@ -5,16 +5,13 @@
  margin-left: 50px;
  margin-bottom: 50px;
  width: 90%;
+ background-color: var(--background1, red);
  max-height: 150px;
- background-color: #E8F8F5;
  display: flex;
- height: 250px;
- background-color: var(--green1, red);
- position: relative;
 }
 
 .SmallInfoTechTitle {
-  color: #4a4d4c;
+  color: var(--textColor, red);
   text-align: left;
   font-family: muliSemibold;
   margin-left: 2%;
@@ -24,13 +21,13 @@
 }
 
 .SmallInfoTechTitle h2:hover {
-  color: var(--green5, red);
-  text-decoration: underline var(--green5, red);
+  color: var(--textHover, red);
+  text-decoration: underline var(--textHover, red);
   cursor: pointer;
 }
 
 .SmallInfoTechText {
-  color: #4a4d4c;
+  color: var(--textColor, red);
   text-align: left;
   font-family: muliSemibold;
   overflow: hidden;
@@ -40,27 +37,24 @@
 }
 
 .ReadMoreButton {
-  background-color: var(--green9, red);
+  background-color: var(--buttonColor, red);
   border-radius: 12px;
   padding: 4px 8px;
   border:none;
+  box-shadow: 2px 5px var(--buttonHover, #138D75);
   text-transform: uppercase;
-  color: white;
+  color: var(--textColor, red);
   text-align: center;
   margin-top: 10px;
 }
 
 .ReadMoreButton:hover {
-  background-color: var(--green10, red);
-  text-decoration: underline white;
-  background-color: var(--green10, red);
-  text-decoration: underline white;
-  background-color: #0B5345;
-  text-decoration: underline white;
+  background-color: var(--buttonHover, red);
+  text-decoration: underline var(--buttonHover, red);
 }
 
 .seperator{
-  border: 0.5px solid #4a4d4c;
+  border: 0.5px solid var(--textColor, red);;
   width: 100%;
   margin: 10px;
   margin-top: 10px;

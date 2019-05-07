@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import SmallInfoTech from './InfoBoxTech'
+import SmallInfoBox from './SmallInfoBox'
 
 import '../css/searchPage.css'
 
@@ -10,22 +10,27 @@ import { getCategorizedKeywords } from '../helpers/database'
 const mockData = [
     {
         name: "Tech1",
+        desc: "blablablablabla",
         tags: ["Free", "University", "Upper secondary school", "Website", "OSX", "Projector", "Computer"],
     },
     {
         name: "Tech2",
+        desc: "blablablablabla",
         tags: ["Free", "University", "Upper secondary school", "Offline", "OSX", "Android", "Whiteboard"],
     },
     {
         name: "Tech3",
+        desc: "blablablablabla",
         tags: ["Free (students)", "Kindergarden", "Secondary school", "Offline", "Ubunutu", "OSX", "Clickers", "Computer"],
     },
     {
         name: "Tech4",
+        desc: "blablablablabla",
         tags: ["Free (students)", "University", "Upper secondary school", "Website", "Offline", "Windows", "Smartphone", "Computer"],
     },
     {
         name: "Tech5",
+        desc: "blablablablabla",
         tags: ["Free"],
     },
 ]
@@ -175,7 +180,7 @@ const Search = () => {
             <div className="listwrapper">
                 {
                     mockData.filter(element => selTotalVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
-                        return <p key={element.name}> {element.name}</p>
+                        return <SmallInfoBox key={element.name} Title={element.name} Text={element.desc} ID={element.tags}/>
                     })
                     
                 }

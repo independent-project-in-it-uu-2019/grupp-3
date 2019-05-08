@@ -134,8 +134,8 @@ const Search = () => {
                 <div className="container" className="dropdown">
                     <div className="row">
                         <div className="col-md-12" align="center" className="search">
-                            <input type="text" />
-                        </div >
+                            {/*<input type="text" />*/}
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col-sm">

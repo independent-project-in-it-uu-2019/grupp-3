@@ -28,13 +28,13 @@ export default class Footer extends Component {
         </div>
         <div className="col-sm-4">
             <div className="FooterTitle">References</div>
-            <div className="FooterBody">Steffi Knorn</div>
+            <div className="FooterBody">Elon Musk</div>
         </div>
         <div className="col-sm-4">
-            <div className="FooterTitle">About</div>
-            <div className="FooterBody"><b>Developed by:</b></div>
-            <div className="FooterBody">David Black-Schaffer</div>
-            <div className="FooterBody">Sameh El-Ansary</div>
+            <div className="FooterTitle">Related Tools</div>
+            <div className="FooterBody Link">Scalable Learning</div>
+            <div className="FooterBody Link">Active Presenter</div>
+            <div className="FooterBody Link">Screencaster</div>
         </div>
       </div>
     )

@@ -140,30 +140,35 @@ const Search = () => {
                     <div className="row">
                         <div className="col-sm">
                             <Select options={cost}
+                                placeholder={"Cost"}
                                 isMulti
                                 onChange={(opt) => savedCostValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={edu}
+                                placeholder={"Education"}
                                 isMulti
                                 onChange={(opt) => savedEduValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={misc}
+                                placeholder={"Misc"}
                                 isMulti
                                 onChange={(opt) => savedMiscValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={plat}
+                                placeholder={"Platform"}
                                 isMulti
                                 onChange={(opt) => savedPlatValue(opt)}
                             />
                         </div>
                         <div className="col-sm">
                             <Select options={hard}
+                                placeholder={"Hardware"}
                                 isMulti
                                 onChange={(opt) => savedHardValue(opt)}
                             />

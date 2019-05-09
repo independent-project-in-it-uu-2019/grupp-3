@@ -7,11 +7,8 @@ export class StartPageButtons extends Component {
     render() {
         return (
             <div className="col-md-12 buttonsdiv" role="group" aria-label="ButtonsFrontpage" align="center">
-                <Link to={"/search"}>
-                    <button type="button" className="startbutton"> Search </button>
-                </Link>
                 <Link to={"/browse"}>
-                    <button type="button" className="startbutton"> Browse </button>
+                    <button type="button" className="startbutton"> Get Started </button>
                 </Link>
             </div>
         );
@@ -19,4 +16,3 @@ export class StartPageButtons extends Component {
 }
 
 export default StartPageButtons;
-

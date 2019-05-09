@@ -12,6 +12,8 @@
     --buttonColor: #FADBD8; /*Button color*/
     --buttonHover:#F1948A; /*Hover button color*/
 
+    --boxHover:rgb(241, 132, 120);
+
     --linkColor:#F1948A; /*Link color*/
 }
 

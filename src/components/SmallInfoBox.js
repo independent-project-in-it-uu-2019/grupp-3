@@ -4,42 +4,51 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
 
+import {getKeywordsOfTool} from '../helpers/database'
+
 export default class SmallInfoBox extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isExpanded: false,
+      isLoading: true,
+      keywords: [],
     }
-
-    this.toggleExpansion = this.toggleExpansion.bind(this);
     this.handleReadMore = this.handleReadMore.bind(this);
   }
 
-  toggleExpansion() {
-    this.setState({isExpanded: !this.state.isExpanded});
+  async componentDidMount() {
+    var keywords = await getKeywordsOfTool(this.props.ID);
+
+    console.log(keywords);
+    this.setState({
+      keywords: keywords,
+      isLoading: false,
+    });
   }
 
-  handleReadMore(ID) {
+  handleReadMore() {
     console.log("Clicked read more");
-
+    document.location.href = "/tool/"+this.props.ID;
   }
 
   render() {
     return (
     <div className="col-6">
-    <div className="boxContainer row" style={{maxHeight: this.state.isExpanded ? 1000: null}}>
-    <div className="smallInfoBox d-flex flex-row">
-          <div className="textGroup headerDivider col-9" style={{maxHeight: this.state.isExpanded ? 1000: null}}>
+    <div className="boxContainer row" onClick={this.handleReadMore}>
+    <div className="smallInfoBox d-flex flex-direction-row">
+          <div className="textGroup col-12">
               <Link className="smallInfoBoxTitle" to={"/tool/"+this.props.ID}><h2>{this.props.Title}</h2></Link>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
-              <Link className="readMore" to={"/tool/"+this.props.ID}><p>Read More &#9654;</p></Link>
+              <p>Keywords: {this.state.keywords.map((keyword, index) => {
+                return (
+                  <span>{index ? ",":""} {keyword}</span>
+                )
+              })}
+              </p>
+            <Link className="readMore" to={"/tool/"+this.props.ID}><p>Read More &#9654;</p></Link>
             </div>
-          </div>
-          <div id="rotate" onClick={this.toggleExpansion} className="plusContainer col-3"
-                style={{transform: this.state.isExpanded ? "rotate(45deg)":"rotate(0)"}}>
-            <img src={Plus} style={{height: "90%", width: "90%", alignSelf: "center"}}/>
           </div>
     </div>
     </div>

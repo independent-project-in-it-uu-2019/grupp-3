@@ -61,13 +61,13 @@ export default class BrowsePage extends Component {
                 <div className="col-6">
                 <h2 style={titleStyle}>Tools</h2>
                     {tools.map(tool => 
-                        <SmallInfoBox Title={tool.Name} Text={tool.Description} ID={tool.ID}/>
+                        <SmallInfoBox Title={tool.Name} Text={tool.Short_description} ID={tool.ID}/>
                         )}
                 </div>
                 <div className="col-6 align-self-center">
                 <h2 style={titleStyle}>Methods</h2>
                     {methods.map(method => 
-                        <SmallInfoTech Title={method.Name} Text={method.Description} imageURL={method.Image_URL} ID={method.ID}/>
+                        <SmallInfoTech Title={method.Name} Text={method.Short_description} imageURL={method.Image_URL} ID={method.ID}/>
                         )}
                 </div>
             </div>

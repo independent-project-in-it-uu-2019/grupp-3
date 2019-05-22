@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header'
 import SmallInfoBox from './SmallInfoBox'
 import SmallInfoTech from './InfoBoxTech'
 
-import headerImg from '../images/header.jpg'
-import logo from '../images/UU_LOGO.png'
 
 import {getAllMethods, getAllTools} from '../helpers/database'
 

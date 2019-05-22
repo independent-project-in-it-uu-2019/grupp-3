@@ -27,10 +27,11 @@ export default class SmallInfoTech extends Component {
               <Link to={"/method/" + this.props.ID} style={{ color: "#4a4d4c" }}><h2>{this.props.Title}</h2></Link>
             </div>
             <div className="SmallInfoTechText">
-              <p>{this.props.Text}</p>
+              <p>A short description</p>
+              <p>Keywords: </p>
             </div>
             <button type="button btn-xs" className="ReadMoreButton">
-              <Link to={"/method/" + this.props.ID} style={{ color: "var(--textColor, gray)" }}><p>Read More &#9654;</p></Link>
+              <Link to={`/method/${  this.props.ID}`} style={{ color: "var(--textColor, gray)" }}><p>Read More &#9654;</p></Link>
             </button>
             <p className="seperator" />
           </div>

@@ -17,15 +17,21 @@
 }
 
 .searchButton{
-    margin: 5px;
     background-color: var(--buttonColor, red);
-    border-radius: 5px;
-    color: var(--color7, red);
+    border-radius: 12px;
     font-size: 20px;
+    padding: 4px 8px;
+    border:none;
+    box-shadow: 2px 5px var(--buttonHover, #138D75);
+    text-transform: uppercase;
+    color: var(--textColor, red);
+    text-align: center;
+    margin-top: 10px;
 }
 
 .searchButton:hover {
     background-color: var(--buttonHover, red);
+    text-decoration: underline var(--buttonHover, red);
 }
 
 .search{

@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.HeaderContainer:hover {
+    cursor: pointer;
+}
+
 .ImgContainer img {
     width: 100%;
     height: 200px;

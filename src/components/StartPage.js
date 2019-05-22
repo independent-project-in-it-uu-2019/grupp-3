@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StartPageButtons from './StartPageButtons';
 import StartPageInfo from "./StartPageInfo";
 
-export class StartPage extends Component {
+export default class StartPage extends Component {
     render() {
         return (
             <div>
@@ -13,5 +13,3 @@ export class StartPage extends Component {
         );
     }
 }
-
-export default StartPage;

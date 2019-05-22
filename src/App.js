@@ -7,6 +7,7 @@ import StartPage from './components/StartPage';
 import SearchPage from './components/SearchPage';
 import StartPageInfo from './components/StartPageInfo';
 import MoreInfo from './components/MoreInfo';
+import About from './components/About';
 import SmallInfoBox from './components/SmallInfoBox'
 import SmallInfoTech from './components/InfoBoxTech'
 import {BrowserRouter as Router, Route} from "react-router-dom";
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route path="/Search" exact component={SearchPage}/>
                     <Route path="/:type/:id" exact component={MoreInfo}/>
                     <Route path="/Browse" exact component={BrowsePage}/>
+                    <Route path="/About" exact component={About}/>
                 </Router>
             </div>
         );

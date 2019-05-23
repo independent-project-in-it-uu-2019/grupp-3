@@ -1,10 +1,9 @@
-import React, { Component} from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component} from 'react';
+import { BrowserRouter as Link } from 'react-router-dom';
 
-import '../css/smallInfoBox.css'
-import Plus from '../svg/plus.svg'
+import '../css/smallInfoBox.css';
 
-import {getKeywordsOfTool} from '../helpers/database'
+import {getKeywordsOfTool} from '../helpers/database';
 
 export default class SmallInfoBox extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ export default class SmallInfoBox extends Component {
 
   handleReadMore() {
     console.log("Clicked read more");
-    document.location.href = "/tool/"+this.props.ID;
+    //document.location.href = "/tool/"+this.props.ID;
   }
 
   render() {

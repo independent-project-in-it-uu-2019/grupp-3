@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import SmallInfoBox from './SmallInfoBox'
-import SmallInfoTech from './InfoBoxTech'
+import SmallInfoBox from './SmallInfoBox';
+import SmallInfoTech from './InfoBoxTech';
 
 
-import {getAllMethods, getAllTools} from '../helpers/database'
+import {getAllMethods, getAllTools} from '../helpers/database';
 
 const titleStyle = {fontSize: 40,
                     marginTop:20,

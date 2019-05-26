@@ -15,8 +15,8 @@ export default class Header extends Component {
     return (
       <div className="row">
         <div className="HeaderContainer">
-            <div className="headerTitle" onClick={this.goHome}>N.E.F.T</div>
-            <div className="subTitle" onClick={this.goHome}>- Taking education to the next level</div>
+            <div className="headerTitle" onClick={this.goHome}>T.L.T</div>
+            <div className="subTitle" onClick={this.goHome}>Teaching and Learning Technology</div>
             <div className="LogoContainer" onClick={this.goHome}>
                 <img src={this.props.logo} alt="logo"/>
             </div>

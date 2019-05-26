@@ -13,7 +13,7 @@ export default class About extends Component {
          <h1> About this project </h1>
         </div>
         <div className="aboutText">
-          Blablabla
+          <p>Blablabla</p>
         </div>
       </div>
     )

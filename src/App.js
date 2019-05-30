@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, withRouter, Switch } from 'react-router-dom';
 import headerImg from './images/header.jpg';
 import logo from './images/UU_LOGO.png';
 import Header from './components/Header';
@@ -9,20 +9,24 @@ import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
 import BrowsePage from './components/BrowsePage';
 
+//FELET LIGGER NOG I :TYPE/ID
 class App extends Component {
   render() {
     return (
-          <div className="App">
-              <Router>
+      <Router>
+            <div className="App">
                   <Header headerImg={headerImg} logo={logo} />
-                  <Route path="/" exact component={StartPage} />
-                  <Route path="/Search" exact component={SearchPage} />
-                  <Route path="/:type/:id" exact component={MoreInfo} />
-                  <Route path="/browse" exact component={BrowsePage} />
-                </Router>
+                  <Switch>
+                    <Route exact path="/" component={StartPage} />
+                    <Route path="/search" component={SearchPage} />
+                    <Route path="/browse" component={BrowsePage} />
+                  </Switch>
             </div>
+                </Router>
     );
   }
 }
+
+//       <Route path="/:type/:id" exact component={MoreInfo} />
 
 export default App;

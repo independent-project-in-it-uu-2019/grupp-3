@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+/* eslint-disable react/jsx-filename-extension */
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, withRouter} from 'react-router-dom';	
 
 import '../css/footer.css'
 
@@ -19,13 +21,28 @@ export default class Footer extends Component {
       window.open(link, "_blank");
   }
 
-  render() { //TODO: Render this dynamically depending on the data passed to the component
+  renderRelated() {
+    const { type, data, match } = this.props;
+    if (!data.related.length) {
+      return;
+    }
     return (
-      <div className="row" style={{marginBottom: 20}}>
-        <div className="col-sm-4">
-            <div className="FooterTitle">Website</div>
-            <div className="FooterBody Link" onClick={() =>this.clickLink(this.state.data.website)}>https://www.w3schools.com/css/css_border.asp</div>
-        </div>
+      <div className="col-sm-4">
+        <div className="FooterTitle">Related {type}s</div>
+        {data.related.map((related) => {
+          const id = related.Tool_ID ? related.Tool_ID: related.Method_ID;
+          return (
+          <Link to={"/browse/tool"+`/${id}`} key={id}><div className="FooterBody Link">{related.Name}</div></Link>
+          )
+        } 
+        )}
+      </div>
+    );
+  }
+
+  render() { // TODO: Render this dynamically depending on the data passed to the component
+    return (
+      <div className="row" style={{ marginBottom: 20 }}>
         <div className="col-sm-4">
             <div className="FooterTitle">References</div>
             <div className="FooterBody">Elon Musk</div>
@@ -36,6 +53,8 @@ export default class Footer extends Component {
             <div className="FooterBody Link">Active Presenter</div>
             <div className="FooterBody Link">Screencaster</div>
         </div>
+        {this.renderRelated()}
+        <Link to={"/tool" + "/" + 1} key={33}>asdasdasd</Link>
       </div>
     )
   }

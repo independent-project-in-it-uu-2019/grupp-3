@@ -39,6 +39,11 @@ export default class MoreInfo extends Component {
       this.setState({
         data: toolData[0],
         isLoading: false,
+        id: id,
+        type: "Tool",
+        footerData: {
+          related: relatedMethodData,
+        },
       });
     } else if (match.url.includes('method')) {
       console.log("Fetching method data");
@@ -47,6 +52,11 @@ export default class MoreInfo extends Component {
       this.setState({
         data: methodData[0],
         isLoading: false,
+        id: id,
+        type: "Method",
+        footerData: {
+          related: relatedToolData,
+        },
       });
     }
     console.log(this.state.data[0]);
@@ -86,7 +96,7 @@ export default class MoreInfo extends Component {
               <p className="bodyText">{this.state.data[0].Description}</p>
             </div>
           </div>
-          <Footer data={this.state.footerData} type={this.state.type}/>
+          <Footer data={this.state.footerData} type={this.state.type} id={this.state.id}/>
           <Route path={`${match.path}/:id`} exact component={MoreInfo}></Route>
         </div>
       </div>

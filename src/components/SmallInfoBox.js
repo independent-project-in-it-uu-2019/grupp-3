@@ -35,7 +35,7 @@ export default class SmallInfoBox extends Component {
     <div className="boxContainer row">
     <div className="smallInfoBox d-flex flex-direction-row">
           <div className="textGroup col-12">
-              <Link className="smallInfoBoxTitle" to={`${match.url}/tool/${this.props.ID}`}><h2>{this.props.Title}</h2></Link>
+              <Link className="smallInfoBoxTitle" to={`/tool/${this.props.ID}`}><h2>{this.props.Title}</h2></Link>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
               <p>Keywords: {this.state.keywords.map((keyword, index) => {
@@ -44,7 +44,7 @@ export default class SmallInfoBox extends Component {
                 )
               })}
               </p>
-            <Link className="readMore" to={`${match.url}/tool/${ID}`}><p>Read More &#9654;</p></Link>
+            <Link className="readMore" to={`/tool/${ID}`}><p>Read More &#9654;</p></Link>
             </div>
           </div>
     </div>

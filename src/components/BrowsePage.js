@@ -70,7 +70,6 @@ export default class BrowsePage extends Component {
                         )}
                 </div>
             </div>
-            <Route path={`${match.path}/tool/:id`} component={MoreInfo}></Route>
         </div>
         )
     }

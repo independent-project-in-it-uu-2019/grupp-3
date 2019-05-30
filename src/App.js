@@ -20,6 +20,7 @@ class App extends Component {
                     <Route exact path="/" component={StartPage} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/browse" component={BrowsePage} />
+                    <Route path="/:type/:id" exact component={MoreInfo} />
                   </Switch>
             </div>
                 </Router>

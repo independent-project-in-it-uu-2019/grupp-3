@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import CircleImage from './CircleImage';
-import PineappleIMG from '../images/ananas.jpg';
-import '../css/infoBoxTech.css';
+import CircleImage from './CircleImage'
+import PineappleIMG from '../images/ananas.jpg'
+import '../css/infoBoxTech.css'
 
 export default class SmallInfoTech extends Component {
   constructor(props) {

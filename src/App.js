@@ -16,9 +16,9 @@ class App extends Component {
               <Router>
                   <Header headerImg={headerImg} logo={logo} />
                   <Route path="/" exact component={StartPage} />
-                  <Route path="/search" exact component={SearchPage} />
+                  <Route path="/Search" exact component={SearchPage} />
                   <Route path="/:type/:id" exact component={MoreInfo} />
-                  <Route path="/browse" exact component={BrowsePage} />
+                  <Route path="/Browse" exact component={BrowsePage} />
                 </Router>
             </div>
     );

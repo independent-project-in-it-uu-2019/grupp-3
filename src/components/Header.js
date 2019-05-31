@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
-import { Link, Route, BrowserRouter } from 'react-router-dom'
-import '../css/header.css'
+/* eslint-disable react/jsx-filename-extension */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import '../css/header.css';
 
 export default class Header extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ export default class Header extends Component {
   }
 
   render() {
+    const { logo, headerImg } = this.props;
     return (
       <div className="row">
         <div className="HeaderContainer">
@@ -29,7 +32,12 @@ export default class Header extends Component {
                 <Link to={"/About"} style={{color: "white", margin: 10}}>About this project</Link>
             </div>
         </div>
-    </div>
-    )
+      </div>
+    );
   }
+}
+
+Header.propTypes = {
+  logo: PropTypes.string.isRequired,
+  headerImg: PropTypes.string.isRequired,
 }

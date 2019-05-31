@@ -23,7 +23,6 @@ export default class MoreInfo extends Component {
         empha: '',
         related: '',
       },
-
     };
   }
 
@@ -96,7 +95,7 @@ export default class MoreInfo extends Component {
               <p className="bodyText">{this.state.data[0].Description}</p>
             </div>
           </div>
-          <Footer data={this.state.footerData} type={this.state.type} id={this.state.id}/>
+          <Footer data={this.state.footerData} type={this.state.type} id={this.state.id} />
           <Route path={`${match.path}/:id`} exact component={MoreInfo}></Route>
         </div>
       </div>

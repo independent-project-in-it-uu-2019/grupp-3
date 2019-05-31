@@ -41,8 +41,8 @@ export default class Footer extends Component {
       window.open(link, "_blank");
   }
 
-  openRelated(id) {
-    window.location.href("/tool"+`/${id}`);
+  openRelated(type, id) {
+    window.location.href(`/${type.toLowerCase()}/`+id);
   }
 
   renderProvider() {
@@ -70,7 +70,7 @@ export default class Footer extends Component {
         {data.related.map((related) => {
           const id = related.Tool_ID ? related.Tool_ID: related.Method_ID;
           return (
-          <Link to={"/tool"+`/${id}`} key={id} onClick={(id) => this.openRelated(id)}><div className="FooterBody Link">{related.Name}</div></Link>
+          <Link to={`/${type.toLowerCase()}/`+id} key={id} onClick={(id) => this.openRelated(type, id)}><div className="FooterBody Link">{related.Name}</div></Link>
           )
         } 
         )}

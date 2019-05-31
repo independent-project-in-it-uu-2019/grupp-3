@@ -1,10 +1,11 @@
-import React, { Component} from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component} from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';	
 
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
 
-import {getKeywordsOfTool} from '../helpers/database'
+import {getKeywordsOfTool} from '../helpers/database';
+import MoreInfo from './MoreInfo';
 
 export default class SmallInfoBox extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ export default class SmallInfoBox extends Component {
       isLoading: true,
       keywords: [],
     }
-    this.handleReadMore = this.handleReadMore.bind(this);
   }
 
   async componentDidMount() {
@@ -27,18 +27,15 @@ export default class SmallInfoBox extends Component {
     });
   }
 
-  handleReadMore() {
-    console.log("Clicked read more");
-    document.location.href = "/tool/"+this.props.ID;
-  }
-
   render() {
+    const { ID, match } = this.props;
+    console.log(match.path);
     return (
     <div className="col-6">
-    <div className="boxContainer row" onClick={this.handleReadMore}>
+    <div className="boxContainer row">
     <div className="smallInfoBox d-flex flex-direction-row">
           <div className="textGroup col-12">
-              <Link className="smallInfoBoxTitle" to={"/tool/"+this.props.ID}><h2>{this.props.Title}</h2></Link>
+              <Link className="smallInfoBoxTitle" to={`/tool/${this.props.ID}`}><h2>{this.props.Title}</h2></Link>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
               <p>Keywords: {this.state.keywords.map((keyword, index) => {
@@ -47,7 +44,7 @@ export default class SmallInfoBox extends Component {
                 )
               })}
               </p>
-            <Link className="readMore" to={"/tool/"+this.props.ID}><p>Read More &#9654;</p></Link>
+            <Link className="readMore" to={`/tool/${ID}`}><p>Read More &#9654;</p></Link>
             </div>
           </div>
     </div>

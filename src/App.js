@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, withRouter, Switch } from 'react-router-dom';
 import headerImg from './images/header.jpg';
 import logo from './images/UU_LOGO.png';
 import Header from './components/Header';
@@ -14,20 +14,24 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import BrowsePage from './components/BrowsePage'
 
 class App extends Component {
-    render() {
-        return (
+  render() {
+    return (
+      <Router>
             <div className="App">
-                <Router>
-                <Header headerImg={headerImg} logo={logo}/>
-                    <Route path="/" exact component={StartPage}/>
-                    <Route path="/Search" exact component={SearchPage}/>
-                    <Route path="/:type/:id" exact component={MoreInfo}/>
-                    <Route path="/Browse" exact component={BrowsePage}/>
-                    <Route path="/About" exact component={About}/>
-                </Router>
+                  <Header headerImg={headerImg} logo={logo} />
+                  <Switch>
+                    <Route exact path="/" component={StartPage} />
+                    <Route path="/search" component={SearchPage} />
+                    <Route path="/browse" component={BrowsePage} />
+                    <Route path="/:type/:id" exact component={MoreInfo} />
+                    <Route path="/About" component={About}/>
+                  </Switch>
             </div>
+                </Router>
     );
   }
 }
+
+//       <Route path="/:type/:id" exact component={MoreInfo} />
 
 export default App;

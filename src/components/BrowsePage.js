@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import SmallInfoBox from './SmallInfoBox'
-import SmallInfoTech from './InfoBoxTech'
-
+import SmallInfoBox from './SmallInfoBox';
+import SmallInfoTech from './InfoBoxTech';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import MoreInfo from './MoreInfo';
 
 import {getAllMethods, getAllTools} from '../helpers/database'
 
@@ -43,6 +44,7 @@ export default class BrowsePage extends Component {
 
     render() {
         const {tools, methods} = this.state;
+        const { match } = this.props;
 
         if(this.state.isLoading) {
             return(
@@ -58,13 +60,13 @@ export default class BrowsePage extends Component {
                 <div className="col-6">
                 <h2 style={titleStyle}>Tools</h2>
                     {tools.map(tool => 
-                        <SmallInfoBox Title={tool.Name} Text={tool.Short_description} ID={tool.ID}/>
+                        <SmallInfoBox Title={tool.Name} Text={tool.Short_description} ID={tool.ID} match={match}/>
                         )}
                 </div>
                 <div className="col-6 align-self-center">
                 <h2 style={titleStyle}>Methods</h2>
                     {methods.map(method => 
-                        <SmallInfoTech Title={method.Name} Text={method.Short_description} imageURL={method.Image_URL} ID={method.ID}/>
+                        <SmallInfoTech Title={method.Name} Text={method.Short_description} imageURL={method.Image_URL} ID={method.ID} match={match}/>
                         )}
                 </div>
             </div>

@@ -7,9 +7,12 @@ import Header from './components/Header';
 import StartPage from './components/StartPage';
 import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
-import BrowsePage from './components/BrowsePage';
+import About from './components/About';
+import SmallInfoBox from './components/SmallInfoBox'
+import SmallInfoTech from './components/InfoBoxTech'
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import BrowsePage from './components/BrowsePage'
 
-//FELET LIGGER NOG I :TYPE/ID
 class App extends Component {
   render() {
     return (
@@ -21,6 +24,7 @@ class App extends Component {
                     <Route path="/search" component={SearchPage} />
                     <Route path="/browse" component={BrowsePage} />
                     <Route path="/:type/:id" exact component={MoreInfo} />
+                    <Route path="/About" component={About}/>
                   </Switch>
             </div>
                 </Router>

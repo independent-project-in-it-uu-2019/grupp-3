@@ -1,0 +1,22 @@
+@import './fonts.css';
+@import './colors.css';
+
+.h1 {
+  color: var(--textColor, red);
+  text-align: center;
+  text-decoration: underline var(--textColor, red);
+  font-family: muliSemibold;
+  width: 100%;
+}
+
+.aboutText {
+  border: 2px solid var(--buttonColor, red);
+  border-radius: 5px;
+  width: 70%;
+  color: var(--textColor, red);
+  text-align: center;
+  font-family: muliSemibold;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+}

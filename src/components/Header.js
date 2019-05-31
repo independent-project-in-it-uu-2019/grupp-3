@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 import '../css/header.css';
 
 export default class Header extends Component {
-  static goHome() {
-    document.location.href = '/';
+  constructor(props) {
+      super(props);
+  }
+
+  goHome() {
+    document.location.href = "/";
   }
 
   render() {
@@ -14,19 +18,19 @@ export default class Header extends Component {
     return (
       <div className="row">
         <div className="HeaderContainer">
-          <div className="headerTitle" role="presentation" onClick={Header.goHome} onKeyUp={() => console.log('Key released')}>N.E.F.T</div>
-          <div className="subTitle" role="presentation" onClick={Header.goHome} onKeyUp={() => console.log('Key released')}>- Taking education to the next level</div>
-          <div className="LogoContainer" role="presentation" onClick={Header.goHome} onKeyUp={() => console.log('Key released')}>
-            <img src={logo} alt="logo" />
-          </div>
-          <div className="ImgContainer" role="presentation" onClick={Header.goHome} onKeyUp={() => console.log('Key released')}>
-            <img src={headerImg} alt="headerImg" />
-          </div>
-          <div className="SubHeader">
-            <Link to="/Browse" style={{ color: 'white', margin: 10 }}>Browse</Link>
-            <Link to="/Search" style={{ color: 'white', margin: 10 }}>Search</Link>
-            <Link to="/About" style={{ color: 'white', margin: 10 }}>About this project</Link>
-          </div>
+            <div className="headerTitle" onClick={this.goHome}>T.L.T</div>
+            <div className="subTitle" onClick={this.goHome}>Teaching and Learning Technology</div>
+            <div className="LogoContainer" onClick={this.goHome}>
+                <img src={this.props.logo} alt="logo"/>
+            </div>
+            <div className="ImgContainer" onClick={this.goHome}>
+                <img src={this.props.headerImg} alt="headerImg"/>
+            </div>
+            <div className="SubHeader">
+                <Link to={"/Browse"} style={{color: "white", margin: 10}}>Browse</Link>
+                <Link to={"/Search"} style={{color: "white", margin: 10}}>Search</Link>
+                <Link to={"/About"} style={{color: "white", margin: 10}}>About this project</Link>
+            </div>
         </div>
       </div>
     );

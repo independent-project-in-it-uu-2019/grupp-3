@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, withRouter, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import headerImg from './images/header.jpg';
 import logo from './images/UU_LOGO.png';
 import Header from './components/Header';
@@ -10,7 +10,6 @@ import MoreInfo from './components/MoreInfo';
 import About from './components/About';
 import SmallInfoBox from './components/SmallInfoBox'
 import SmallInfoTech from './components/InfoBoxTech'
-import {BrowserRouter as Router, Route} from "react-router-dom";
 import BrowsePage from './components/BrowsePage'
 
 class App extends Component {

@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import '../css/startPageInfo.css';
 import '../css/circleImage.css';
-import CircleImage from './CircleImage';
+import CircleImage from "./CircleImage";
 
 export class StartPageInfo extends Component {
-  constructor(props) {
-    super(props);
-    this.renderImageLeft = this.renderImageLeft.bind(this);
-    this.renderImageRight = this.renderImageRight.bind(this);
-  }
 
-  renderImageRight() {
-    return (
-      <div className="imgright">
+    constructor(props) {
+        super(props);
+        this.renderImageLeft = this.renderImageLeft.bind(this);
+        this.renderImageRight = this.renderImageRight.bind(this);
+    }
+
+    renderImageRight() {
+        return (
+            <div classname="imgright">
             <div className="row justify-content-center align-items-center">
                 <div className="col-md-5">
                     <div className="col-md-6 d-md-none" align="center">
@@ -34,8 +35,10 @@ export class StartPageInfo extends Component {
             </div>
         )
     }
-                  </p>
-              </div>
+
+    renderImageLeft() {
+        return(
+            <div className="row justify-content-center align-items-center">
                 <div className="col-md-2">
                     <div className="imgContainer d-none d-md-block float-center">
                         <CircleImage width={"14vw"} height={"14vw"} imageURL={require('../images/pic1.jpg')}/>
@@ -56,14 +59,14 @@ export class StartPageInfo extends Component {
         )
     }
 
-  render() {
-    return (
-      <div>
-            {this.renderImageLeft()}
-            {this.renderImageRight()}
-          </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                {this.renderImageLeft()}
+                {this.renderImageRight()}
+            </div>
+        );
+    }
 }
 
 export default StartPageInfo;

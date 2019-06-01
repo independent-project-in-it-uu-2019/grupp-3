@@ -47,6 +47,4 @@ export default class SmallInfoBox extends Component {
     )
   }
 }
-
-//              <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
-
+              

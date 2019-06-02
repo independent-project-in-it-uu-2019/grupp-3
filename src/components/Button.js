@@ -8,7 +8,7 @@ export default class Button extends Component {
 
   render() {
     return (
-      <div className="button" style={{width: this.props.width, 
+      <div className="button" style={{width: this.props.width,
                     height: this.props.height,
                     color: this.props.color,
                     borderRadius: "5px 5px 5px 5px",

@@ -2,16 +2,20 @@
 @import './colors.css';
 
 .boxContainer {
-  max-height: 150px;
+  max-height: 200px;
   width: 100%;
   min-width: 500px;
   margin-top: 30px;
   transition: all .2s ease-in-out;
 }
 
+.boxContainer:hover {
+  cursor: pointer;
+}
+
 .smallInfoBox {
   margin-left: 10px;
-  background-color: var(--background3, red);
+  background-color: var(--background2, red);
   border-radius: 10px;
   height: 100%;
   box-shadow: 1px 1px 10px black;
@@ -21,20 +25,23 @@
   overflow-x: hidden;
 }
 
-.readMore {
+.ReadMoreButton {
+  background-color: var(--buttonColor, red);
+  border-radius: 12px;
+  padding: 4px 8px;
+  border:none;
+  box-shadow: 2px 5px var(--buttonHover, #138D75);
+  text-transform: uppercase;
+  color: var(--textColor, red);
   text-align: center;
-  font-size: 20px;
-  color: var(--textColor, gray);
+  margin-left: 38%;
+  margin-bottom: 3%;
+  margin-top: 0%;
 }
 
-.readMore:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: var(--textHover, red);
-}
-
-.headerDivider {
-  border-right: 3px solid rgba(245, 183, 177, 0.5);
+.ReadMoreButton:hover {
+  background-color: var(--buttonHover, red);
+  text-decoration: underline var(--buttonHover, red);
 }
 
 .smallInfoBoxTitle {
@@ -59,25 +66,8 @@
   height: 100%;
 }
 
-.plusContainer {
-  margin-top: 15px;
-  width: 60%;
-  height: 60%;
-  transition: all .2s ease-in-out;
-}
-
-.plusContainer.rotate {
-  transform: rotate(45deg);
-}
-
-.plusContainer:hover {
-  transform: scale(1.05, 1.05);
-  animation-duration: 1s;
-  cursor: pointer;
-}
-
 .textGroup {
-  width: 67%;
-  max-height: 150px;
+  width: 100%;
+  max-height: 200px;
   overflow: hidden;
 }

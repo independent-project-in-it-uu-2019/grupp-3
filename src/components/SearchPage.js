@@ -177,7 +177,7 @@ const Search = () => {
                     <div className="col-md-12" align="center">
                         <button type="button" className="searchButton"
                             onClick={() => filterMerge()}
-                        >Search</button>
+                        >Apply</button>
                     </div>
                 </div>
             </div>

@@ -1,22 +1,32 @@
 @import './fonts.css';
 @import './colors.css';
 
-.h1 {
+.App {
+  background-color: var(--background1, red);
+  height: 100vh;
+}
+
+.goBackButton{
+  margin-left: 13%;
+  margin-top: 2%;
+}
+
+.aboutTitle{
   color: var(--textColor, red);
   text-align: center;
-  text-decoration: underline var(--textColor, red);
   font-family: muliSemibold;
   width: 100%;
 }
 
 .aboutText {
-  border: 2px solid var(--buttonColor, red);
+  border: 5px solid var(--buttonColor, red);
   border-radius: 5px;
-  width: 70%;
+  width: 60%;
   color: var(--textColor, red);
   text-align: center;
   font-family: muliSemibold;
   width: 70%;
   height: 100%;
   margin-left: 15%;
+  margin-top: 2%;
 }

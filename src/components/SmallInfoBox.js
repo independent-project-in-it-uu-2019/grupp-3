@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';	
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import '../css/smallInfoBox.css'
 import Plus from '../svg/plus.svg'
@@ -32,10 +32,10 @@ export default class SmallInfoBox extends Component {
     console.log(match.path);
     return (
     <div className="col-6">
-    <div className="boxContainer row">
-    <div className="smallInfoBox d-flex flex-direction-row">
+      <div className="boxContainer row">
+        <div className="smallInfoBox d-flex flex-direction-row">
           <div className="textGroup col-12">
-              <Link className="smallInfoBoxTitle" to={`/tool/${this.props.ID}`}><h2>{this.props.Title}</h2></Link>
+            <Link className="smallInfoBoxTitle" to={`/tool/${this.props.ID}`}><h2>{this.props.Title}</h2></Link>
             <div className="smallInfoBoxText">
               <p style={{width: "80%"}}>{this.props.Text}</p>
               <p>Keywords: {this.state.keywords.map((keyword, index) => {
@@ -44,15 +44,16 @@ export default class SmallInfoBox extends Component {
                 )
               })}
               </p>
-            <Link className="readMore" to={`/tool/${ID}`}><p>Read More &#9654;</p></Link>
+              <button type="button btn-xs" className="ReadMoreButton">
+                  <Link to={`/tool/${ID}`} style={{ color: "var(--textColor, gray)" }}><p>Read More &#9654;</p></Link>
+              </button>
             </div>
           </div>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
     )
   }
 }
 
 //              <img onClick={this.onItemClick} src={Plus} style={{height: "80%", width: "80%"}}/>
-

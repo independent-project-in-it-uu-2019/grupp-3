@@ -161,7 +161,6 @@ const Search = () => {
                 */}
                 <BrowsePage/>
             </div>
-
         </div>
     )
 }

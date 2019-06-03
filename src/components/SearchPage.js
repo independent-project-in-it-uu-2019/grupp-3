@@ -7,6 +7,8 @@ import BrowsePage from './BrowsePage'
 import '../css/searchPage.css';
 
 import { getCategorizedKeywords } from '../helpers/database';
+import { getAllTools } from '../helpers/database';
+
 
 const Search = () => {
     const [cost, setCost] = useState([]);

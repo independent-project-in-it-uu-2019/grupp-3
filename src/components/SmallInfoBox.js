@@ -28,8 +28,7 @@ export default class SmallInfoBox extends Component {
   }
 
   render() {
-    const { ID, match } = this.props;
-    console.log(match.path);
+    const { ID } = this.props;
     return (
     <div className="col-6">
       <div className="boxContainer row">

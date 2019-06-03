@@ -7,7 +7,7 @@ import BrowsePage from './BrowsePage'
 import '../css/searchPage.css';
 
 import { getCategorizedKeywords } from '../helpers/database';
-import { getAllTools } from '../helpers/database';
+import { getAllInfoMethods } from '../helpers/database';
 
 
 const Search = () => {
@@ -27,7 +27,7 @@ const Search = () => {
     useEffect(() => {
         const fetchData = async () => {
             var data = await getCategorizedKeywords();
-            console.log(data);
+            //console.log(data);
 
             setCost(dataToOptions(data.Cost));
             setEdu(dataToOptions(data["Form of education"]));
@@ -37,7 +37,7 @@ const Search = () => {
         }
         fetchData();
     }, [])
-    console.log('TITTA HÄR', selTotalVal);
+    //console.log('TITTA HÄR', selTotalVal);
     const dataToOptions = (data) => {
         const optionsArray = [];
         data.forEach((element, i) => {
@@ -98,9 +98,9 @@ const Search = () => {
         this.setState({ selected: value });
       }*/
     const filterMerge = () => {
-        console.log(selCostVal, selEduVal, selHardVal, selMiscVal, selPlatVal);
+       // console.log(selCostVal, selEduVal, selHardVal, selMiscVal, selPlatVal);
         setSelTotalVal([...selCostVal, ...selEduVal, ...selHardVal, ...selMiscVal, ...selPlatVal]);
-        console.log('selTotalVal', selTotalVal);
+        //console.log('selTotalVal', selTotalVal);
     }
 
 
@@ -158,10 +158,12 @@ const Search = () => {
                 </div>
             </div>
             <div className="listwrapper">
-                {/*
-                Placera sökresultat här
-                */}
-                <BrowsePage/>
+                {
+                    /*mockData.filter(element => selTotalVal.every(val => element.tags.some(value => value === val))).map((element, i) => {
+                        return <SmallInfoBox key={element.name} Title={element.name} Text={element.desc} ID={element.ID}/>
+                    } */
+                }
+                <BrowsePage selTotalVal={selTotalVal}/>
             </div>
         </div>
     )

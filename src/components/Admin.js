@@ -3,8 +3,14 @@ import React, { Component } from 'react';
 export default class Admin extends Component {
     render() {
         return (
-            <div>
+            <div className="admin">
                 <form>
+                    <div>
+                        Tool:
+                        <input type="radio" name="type" value="tool"/>
+                        Method:
+                        <input type="radio" name="type" value="method" />
+                    </div>
                     <div>
                     <label>
                         Name:
@@ -53,6 +59,9 @@ export default class Admin extends Component {
                         Clickers:
                         <input type="checkbox" name="clickers"/>
 
+                    </div>
+                    <div>
+                        <button>Add</button>
                     </div>
 
                 </form>

@@ -3,7 +3,7 @@ import SmallInfoBox from './SmallInfoBox'
 import SmallInfoTech from './InfoBoxTech'
 
 
-import {getAllMethods, getAllTools} from '../helpers/database'
+import {getAllMethods, getAllTools, adminAddRecord} from '../helpers/database'
 
 const titleStyle = {fontSize: 40,
                     marginTop:20,
@@ -55,6 +55,7 @@ export default class BrowsePage extends Component {
         return (
         <div>
             <div className="row" style={{paddingLeft: 50, paddingRight: 50}}>
+                <button onClick={() => adminAddRecord("")}>Click me!</button>
                 <div className="col-6">
                 <h2 style={titleStyle}>Tools</h2>
                     {tools.map(tool => 

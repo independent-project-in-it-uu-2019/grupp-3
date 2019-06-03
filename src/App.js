@@ -7,6 +7,7 @@ import Header from './components/Header';
 import StartPage from './components/StartPage';
 import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
+import Admin from './components/Admin';
 import BrowsePage from './components/BrowsePage';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
                   <Route path="/Search" exact component={SearchPage} />
                   <Route path="/:type/:id" exact component={MoreInfo} />
                   <Route path="/Browse" exact component={BrowsePage} />
+                  <Route path="/Admin" exact component={Admin} />
                 </Router>
             </div>
     );

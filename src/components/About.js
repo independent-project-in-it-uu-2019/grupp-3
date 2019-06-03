@@ -32,7 +32,7 @@ export default class About extends Component {
           the work behind two groups’ bachelor thesis. The first group, who worked on the
           project in the Spring of 2018, developed a database in which they stored different
           tools and methods. The second group continued the work in the Spring of 2019 and
-          developed an user friendly interface for the website. 
+          developed an user friendly interface for the website.
           </p>
         </div>
       </div>

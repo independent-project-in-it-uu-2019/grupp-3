@@ -1,7 +1,7 @@
 @import './fonts.css';
 @import './colors.css';
 
-.App {
+.about {
   background-color: var(--background1, red);
   height: 100vh;
 }
@@ -26,7 +26,6 @@
   text-align: center;
   font-family: muliSemibold;
   width: 70%;
-  height: 100%;
   margin-left: 15%;
   margin-top: 2%;
 }

@@ -10,7 +10,7 @@ const titleStyle = {fontSize: 40,
                     marginTop:20,
                     fontFamily:"muliExtraBold",
                     textAlign:"center",
-                    color: "#494949"    
+                    color: "#494949"
                 };
 export default class BrowsePage extends Component {
     constructor(props) {
@@ -59,13 +59,13 @@ export default class BrowsePage extends Component {
             <div className="row" style={{paddingLeft: 50, paddingRight: 50}}>
                 <div className="col-6">
                 <h2 style={titleStyle}>Tools</h2>
-                    {tools.map(tool => 
+                    {tools.map(tool =>
                         <SmallInfoBox Title={tool.Name} Text={tool.Short_description} ID={tool.ID} match={match}/>
                         )}
                 </div>
                 <div className="col-6 align-self-center">
                 <h2 style={titleStyle}>Methods</h2>
-                    {methods.map(method => 
+                    {methods.map(method =>
                         <SmallInfoTech Title={method.Name} Text={method.Short_description} imageURL={method.Image_URL} ID={method.ID} match={match}/>
                         )}
                 </div>

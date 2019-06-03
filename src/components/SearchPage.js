@@ -6,8 +6,13 @@ import BrowsePage from './BrowsePage'
 
 import '../css/searchPage.css';
 
+<<<<<<< HEAD
 import { getCategorizedKeywords } from '../helpers/database';
 import { getAllInfoMethods } from '../helpers/database';
+=======
+import { getCategorizedKeywords, getAllMethods } from '../helpers/database';
+import { getAllTools } from '../helpers/database';
+>>>>>>> 3fc63ee710661505c2daefc6ef2d3be31beaf138
 
 
 const Search = () => {
@@ -23,11 +28,19 @@ const Search = () => {
     const [selPlatVal, setSelPlatVal] = useState([]);
     const [selHardVal, setSelHardVal] = useState([]);
     const [selTotalVal, setSelTotalVal] = useState([]);
+    const [searchValue, setSearchValue] = useState([]);
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         const fetchData = async () => {
             var data = await getCategorizedKeywords();
+<<<<<<< HEAD
             //console.log(data);
+=======
+            var tools = await getAllTools();
+            var methods = await getAllMethods();
+            filterMerge(tools, methods);
+            console.log(data);
+>>>>>>> 3fc63ee710661505c2daefc6ef2d3be31beaf138
 
             setCost(dataToOptions(data.Cost));
             setEdu(dataToOptions(data["Form of education"]));
@@ -103,14 +116,23 @@ const Search = () => {
         //console.log('selTotalVal', selTotalVal);
     }
 
+    const filter = (filter, methods) => {
+        for (let i in filter) {
+
+        }
+    }
+
+    const handleChange = (event) => {
+        setSearchValue(event.target.value);
+    }
 
     return (
         <div className="container" className="page">
             <div className="entireSearch">
                 <div className="container" className="dropdown">
                     <div className="row">
-                        <div className="col-md-12" align="center" className="search">
-                            {/*<input type="text" />*/}
+                        <div className="col-md-12 align-items-center" className="search">
+                            <input onChange={handleChange} type="text" aria-label="Search..." placeholder="Search..." className="form-control"/>
                         </div>
                     </div>
                     <div className="row">

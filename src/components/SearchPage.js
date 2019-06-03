@@ -6,13 +6,8 @@ import BrowsePage from './BrowsePage'
 
 import '../css/searchPage.css';
 
-<<<<<<< HEAD
-import { getCategorizedKeywords } from '../helpers/database';
-import { getAllInfoMethods } from '../helpers/database';
-=======
 import { getCategorizedKeywords, getAllMethods } from '../helpers/database';
 import { getAllTools } from '../helpers/database';
->>>>>>> 3fc63ee710661505c2daefc6ef2d3be31beaf138
 
 
 const Search = () => {
@@ -33,14 +28,10 @@ const Search = () => {
     useEffect(() => {
         const fetchData = async () => {
             var data = await getCategorizedKeywords();
-<<<<<<< HEAD
-            //console.log(data);
-=======
             var tools = await getAllTools();
             var methods = await getAllMethods();
             filterMerge(tools, methods);
             console.log(data);
->>>>>>> 3fc63ee710661505c2daefc6ef2d3be31beaf138
 
             setCost(dataToOptions(data.Cost));
             setEdu(dataToOptions(data["Form of education"]));

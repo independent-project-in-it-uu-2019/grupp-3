@@ -1,0 +1,4 @@
+.admin{
+    background-color: var(--background1, red);
+    height: 2000px;
+}

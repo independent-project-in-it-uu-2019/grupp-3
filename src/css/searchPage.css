@@ -38,3 +38,7 @@
     margin: 5px;
     align-content: center;
 }
+
+.searchBar {
+    align-self: center;
+}

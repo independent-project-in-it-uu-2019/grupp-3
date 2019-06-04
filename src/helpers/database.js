@@ -107,4 +107,8 @@ export function adminAddRecord(entry) {
         "Image_url": "https://images.unsplash.com/photo-1558197385-575ecbf37bef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
     }
     postData(mockData, url);
+
+export function getAllInfoMethods(){
+    var url = "http://www2.teknat.uu.se/TLT/database_connect/get/get_methods_with_info.php?Table=Tool";
+    return fetchData(url);
 }

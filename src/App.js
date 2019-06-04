@@ -8,6 +8,7 @@ import StartPage from './components/StartPage';
 import SearchPage from './components/SearchPage';
 import MoreInfo from './components/MoreInfo';
 import About from './components/About';
+import Admin from './components/Admin';
 import SmallInfoBox from './components/SmallInfoBox'
 import SmallInfoTech from './components/InfoBoxTech'
 import BrowsePage from './components/BrowsePage'
@@ -24,13 +25,12 @@ class App extends Component {
                     <Route path="/browse" component={SearchPage} />
                     <Route path="/:type/:id" exact component={MoreInfo} />
                     <Route path="/About" component={About}/>
+                    <Route path="/Admin" component={Admin}/>
                   </Switch>
             </div>
                 </Router>
     );
   }
 }
-
-//       <Route path="/:type/:id" exact component={MoreInfo} />
 
 export default App;

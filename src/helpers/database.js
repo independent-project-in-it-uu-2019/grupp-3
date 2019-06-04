@@ -78,3 +78,8 @@ export function getToolsByMethodID(methodID) {
     var url = "http://www2.teknat.uu.se/TLT/database_connect/get/get_method_tool_map.php?ID="+methodID+"&Table=Tool";
     return fetchData(url);
 }
+
+export function getAllInfoMethods(){
+    var url = "http://www2.teknat.uu.se/TLT/database_connect/get/get_methods_with_info.php?Table=Tool";
+    return fetchData(url);
+}

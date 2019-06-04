@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Route } from 'react-router-dom';
 
 import CircleImage from './CircleImage';
 import Footer from './Footer';
 import Button from './Button';
 
-import { getToolInfo, getMethodInfo } from '../helpers/database';
+import {
+  getToolInfo, getMethodInfo, getMethodsByToolID, getToolsByMethodID,
+} from '../helpers/database';
 
 import '../css/moreInfo.css';
 
@@ -22,26 +25,35 @@ export default class MoreInfo extends Component {
         empha: '',
         related: '',
       },
-
     };
   }
 
   async componentDidMount() {
-    console.log('ID');
-    console.log(this.props.match.params.id);
-    console.log(this.props.match.params.type);
-    let type = this.props.match.params.type;
-    if (type == 'tool') {
-      let toolData = await getToolInfo(this.props.match.params.id);
+    const { match } = this.props;
+    const { id } = this.props.match.params;
+    if (match.url.includes('tool')) {
+      const toolData = await getToolInfo(id);
+      const relatedMethodData = await getMethodsByToolID(id);
       this.setState({
         data: toolData[0],
         isLoading: false,
+        id,
+        type: 'Tool',
+        footerData: {
+          related: relatedMethodData,
+        },
       });
-    } else if (type == 'method') {
-      let methodData = await getMethodInfo(this.props.match.params.id);
+    } else if (match.url.includes('method')) {
+      const methodData = await getMethodInfo(id);
+      const relatedToolData = await getToolsByMethodID(id);
       this.setState({
         data: methodData[0],
         isLoading: false,
+        id,
+        type: 'Method',
+        footerData: {
+          related: relatedToolData,
+        },
       });
     }
     console.log(this.state.data[0]);
@@ -52,37 +64,39 @@ export default class MoreInfo extends Component {
   }
 
   render() {
+    const { match } = this.props;
     if (this.state.isLoading) {
       return (
-              <div>
-                  <p>Loading...</p>
-                </div>
+        <div>
+          <p>Loading...</p>
+        </div>
       );
     }
     return (
-          <div>
-              <div className="container">
-                  <div className="row">
-                  <div onClick={this.goBack} className="col-sm-4 goBack">
-                      <Button text="Go back" width={150} height={40} />
-                    </div>
-                  <div className="col-sm-4">
-                      <p className="title">{this.state.data[0].Name}</p>
-                    </div>
-                  <div className="col-sm-12">
-                      <div className="imgContainer">
-                          <CircleImage
-width={"18vw"}
-height={"18vw"}
-                          imageURL={this.state.data[0].Image_URL ? this.state.data[0].Image_URL : require('../images/ananas.jpg')} 
-                        />
-                        </div>
-                      <p className="bodyText">{this.state.data[0].Description}</p>
-                    </div>
-                </div>
-                  <Footer data={this.state.footerData} />
-                </div>
+      <div>
+        <div className="container">
+          <div className="row">
+            <div onClick={this.goBack} className="col-sm-4 goBack">
+              <Button text="Go back" width={150} height={40} />
             </div>
+            <div className="col-sm-4">
+              <p className="title">{this.state.data[0].Name}</p>
+            </div>
+            <div className="col-sm-12">
+              <div className="imgContainer">
+                <CircleImage
+                  width="18vw"
+                  height="18vw"
+                  imageURL={this.state.data[0].Image_URL ? this.state.data[0].Image_URL : require('../images/ananas.jpg')}
+                />
+              </div>
+              <p className="bodyText">{this.state.data[0].Description}</p>
+            </div>
+          </div>
+          <Footer data={this.state.footerData} type={this.state.type} id={this.state.id} />
+          <Route path={`${match.path}/:id`} exact component={MoreInfo} />
+        </div>
+      </div>
     );
   }
 }
